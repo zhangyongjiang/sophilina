@@ -1,0 +1,525 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		A343E48D1BEBC67600F57441 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = A343E48C1BEBC67600F57441 /* main.m */; };
+		A343E4901BEBC67600F57441 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = A343E48F1BEBC67600F57441 /* AppDelegate.m */; };
+		A343E4931BEBC67600F57441 /* MasterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A343E4921BEBC67600F57441 /* MasterViewController.m */; };
+		A343E4961BEBC67600F57441 /* DetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A343E4951BEBC67600F57441 /* DetailViewController.m */; };
+		A343E4991BEBC67600F57441 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A343E4971BEBC67600F57441 /* Main.storyboard */; };
+		A343E49B1BEBC67600F57441 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A343E49A1BEBC67600F57441 /* Assets.xcassets */; };
+		A343E49E1BEBC67600F57441 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A343E49C1BEBC67600F57441 /* LaunchScreen.storyboard */; };
+		A343E4A91BEBC67600F57441 /* SophilinaTests.m in Sources */ = {isa = PBXBuildFile; fileRef = A343E4A81BEBC67600F57441 /* SophilinaTests.m */; };
+		A343E4B41BEBC67600F57441 /* SophilinaUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = A343E4B31BEBC67600F57441 /* SophilinaUITests.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		A343E4A51BEBC67600F57441 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = A343E4801BEBC67600F57441 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = A343E4871BEBC67600F57441;
+			remoteInfo = Sophilina;
+		};
+		A343E4B01BEBC67600F57441 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = A343E4801BEBC67600F57441 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = A343E4871BEBC67600F57441;
+			remoteInfo = Sophilina;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		A343E4881BEBC67600F57441 /* Sophilina.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Sophilina.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		A343E48C1BEBC67600F57441 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		A343E48E1BEBC67600F57441 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		A343E48F1BEBC67600F57441 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		A343E4911BEBC67600F57441 /* MasterViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MasterViewController.h; sourceTree = "<group>"; };
+		A343E4921BEBC67600F57441 /* MasterViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MasterViewController.m; sourceTree = "<group>"; };
+		A343E4941BEBC67600F57441 /* DetailViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DetailViewController.h; sourceTree = "<group>"; };
+		A343E4951BEBC67600F57441 /* DetailViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DetailViewController.m; sourceTree = "<group>"; };
+		A343E4981BEBC67600F57441 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		A343E49A1BEBC67600F57441 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		A343E49D1BEBC67600F57441 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		A343E49F1BEBC67600F57441 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A343E4A41BEBC67600F57441 /* SophilinaTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SophilinaTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		A343E4A81BEBC67600F57441 /* SophilinaTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SophilinaTests.m; sourceTree = "<group>"; };
+		A343E4AA1BEBC67600F57441 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A343E4AF1BEBC67600F57441 /* SophilinaUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SophilinaUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		A343E4B31BEBC67600F57441 /* SophilinaUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SophilinaUITests.m; sourceTree = "<group>"; };
+		A343E4B51BEBC67600F57441 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		A343E4851BEBC67600F57441 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A343E4A11BEBC67600F57441 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A343E4AC1BEBC67600F57441 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		A343E47F1BEBC67600F57441 = {
+			isa = PBXGroup;
+			children = (
+				A343E48A1BEBC67600F57441 /* Sophilina */,
+				A343E4A71BEBC67600F57441 /* SophilinaTests */,
+				A343E4B21BEBC67600F57441 /* SophilinaUITests */,
+				A343E4891BEBC67600F57441 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		A343E4891BEBC67600F57441 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				A343E4881BEBC67600F57441 /* Sophilina.app */,
+				A343E4A41BEBC67600F57441 /* SophilinaTests.xctest */,
+				A343E4AF1BEBC67600F57441 /* SophilinaUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		A343E48A1BEBC67600F57441 /* Sophilina */ = {
+			isa = PBXGroup;
+			children = (
+				A343E48E1BEBC67600F57441 /* AppDelegate.h */,
+				A343E48F1BEBC67600F57441 /* AppDelegate.m */,
+				A343E4911BEBC67600F57441 /* MasterViewController.h */,
+				A343E4921BEBC67600F57441 /* MasterViewController.m */,
+				A343E4941BEBC67600F57441 /* DetailViewController.h */,
+				A343E4951BEBC67600F57441 /* DetailViewController.m */,
+				A343E4971BEBC67600F57441 /* Main.storyboard */,
+				A343E49A1BEBC67600F57441 /* Assets.xcassets */,
+				A343E49C1BEBC67600F57441 /* LaunchScreen.storyboard */,
+				A343E49F1BEBC67600F57441 /* Info.plist */,
+				A343E48B1BEBC67600F57441 /* Supporting Files */,
+			);
+			path = Sophilina;
+			sourceTree = "<group>";
+		};
+		A343E48B1BEBC67600F57441 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				A343E48C1BEBC67600F57441 /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		A343E4A71BEBC67600F57441 /* SophilinaTests */ = {
+			isa = PBXGroup;
+			children = (
+				A343E4A81BEBC67600F57441 /* SophilinaTests.m */,
+				A343E4AA1BEBC67600F57441 /* Info.plist */,
+			);
+			path = SophilinaTests;
+			sourceTree = "<group>";
+		};
+		A343E4B21BEBC67600F57441 /* SophilinaUITests */ = {
+			isa = PBXGroup;
+			children = (
+				A343E4B31BEBC67600F57441 /* SophilinaUITests.m */,
+				A343E4B51BEBC67600F57441 /* Info.plist */,
+			);
+			path = SophilinaUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		A343E4871BEBC67600F57441 /* Sophilina */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A343E4B81BEBC67600F57441 /* Build configuration list for PBXNativeTarget "Sophilina" */;
+			buildPhases = (
+				A343E4841BEBC67600F57441 /* Sources */,
+				A343E4851BEBC67600F57441 /* Frameworks */,
+				A343E4861BEBC67600F57441 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Sophilina;
+			productName = Sophilina;
+			productReference = A343E4881BEBC67600F57441 /* Sophilina.app */;
+			productType = "com.apple.product-type.application";
+		};
+		A343E4A31BEBC67600F57441 /* SophilinaTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A343E4BB1BEBC67600F57441 /* Build configuration list for PBXNativeTarget "SophilinaTests" */;
+			buildPhases = (
+				A343E4A01BEBC67600F57441 /* Sources */,
+				A343E4A11BEBC67600F57441 /* Frameworks */,
+				A343E4A21BEBC67600F57441 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				A343E4A61BEBC67600F57441 /* PBXTargetDependency */,
+			);
+			name = SophilinaTests;
+			productName = SophilinaTests;
+			productReference = A343E4A41BEBC67600F57441 /* SophilinaTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		A343E4AE1BEBC67600F57441 /* SophilinaUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A343E4BE1BEBC67600F57441 /* Build configuration list for PBXNativeTarget "SophilinaUITests" */;
+			buildPhases = (
+				A343E4AB1BEBC67600F57441 /* Sources */,
+				A343E4AC1BEBC67600F57441 /* Frameworks */,
+				A343E4AD1BEBC67600F57441 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				A343E4B11BEBC67600F57441 /* PBXTargetDependency */,
+			);
+			name = SophilinaUITests;
+			productName = SophilinaUITests;
+			productReference = A343E4AF1BEBC67600F57441 /* SophilinaUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		A343E4801BEBC67600F57441 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0710;
+				ORGANIZATIONNAME = "Kevin Zhang";
+				TargetAttributes = {
+					A343E4871BEBC67600F57441 = {
+						CreatedOnToolsVersion = 7.1;
+					};
+					A343E4A31BEBC67600F57441 = {
+						CreatedOnToolsVersion = 7.1;
+						TestTargetID = A343E4871BEBC67600F57441;
+					};
+					A343E4AE1BEBC67600F57441 = {
+						CreatedOnToolsVersion = 7.1;
+						TestTargetID = A343E4871BEBC67600F57441;
+					};
+				};
+			};
+			buildConfigurationList = A343E4831BEBC67600F57441 /* Build configuration list for PBXProject "Sophilina" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = A343E47F1BEBC67600F57441;
+			productRefGroup = A343E4891BEBC67600F57441 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				A343E4871BEBC67600F57441 /* Sophilina */,
+				A343E4A31BEBC67600F57441 /* SophilinaTests */,
+				A343E4AE1BEBC67600F57441 /* SophilinaUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		A343E4861BEBC67600F57441 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A343E49E1BEBC67600F57441 /* LaunchScreen.storyboard in Resources */,
+				A343E49B1BEBC67600F57441 /* Assets.xcassets in Resources */,
+				A343E4991BEBC67600F57441 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A343E4A21BEBC67600F57441 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A343E4AD1BEBC67600F57441 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		A343E4841BEBC67600F57441 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A343E4901BEBC67600F57441 /* AppDelegate.m in Sources */,
+				A343E4931BEBC67600F57441 /* MasterViewController.m in Sources */,
+				A343E48D1BEBC67600F57441 /* main.m in Sources */,
+				A343E4961BEBC67600F57441 /* DetailViewController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A343E4A01BEBC67600F57441 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A343E4A91BEBC67600F57441 /* SophilinaTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A343E4AB1BEBC67600F57441 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A343E4B41BEBC67600F57441 /* SophilinaUITests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		A343E4A61BEBC67600F57441 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = A343E4871BEBC67600F57441 /* Sophilina */;
+			targetProxy = A343E4A51BEBC67600F57441 /* PBXContainerItemProxy */;
+		};
+		A343E4B11BEBC67600F57441 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = A343E4871BEBC67600F57441 /* Sophilina */;
+			targetProxy = A343E4B01BEBC67600F57441 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		A343E4971BEBC67600F57441 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				A343E4981BEBC67600F57441 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		A343E49C1BEBC67600F57441 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				A343E49D1BEBC67600F57441 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		A343E4B61BEBC67600F57441 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.1;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		A343E4B71BEBC67600F57441 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		A343E4B91BEBC67600F57441 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = Sophilina/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.sophilina.Sophilina;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		A343E4BA1BEBC67600F57441 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = Sophilina/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.sophilina.Sophilina;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		A343E4BC1BEBC67600F57441 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = SophilinaTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.sophilina.SophilinaTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Sophilina.app/Sophilina";
+			};
+			name = Debug;
+		};
+		A343E4BD1BEBC67600F57441 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = SophilinaTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.sophilina.SophilinaTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Sophilina.app/Sophilina";
+			};
+			name = Release;
+		};
+		A343E4BF1BEBC67600F57441 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = SophilinaUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.sophilina.SophilinaUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = Sophilina;
+				USES_XCTRUNNER = YES;
+			};
+			name = Debug;
+		};
+		A343E4C01BEBC67600F57441 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = SophilinaUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.sophilina.SophilinaUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = Sophilina;
+				USES_XCTRUNNER = YES;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		A343E4831BEBC67600F57441 /* Build configuration list for PBXProject "Sophilina" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A343E4B61BEBC67600F57441 /* Debug */,
+				A343E4B71BEBC67600F57441 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		A343E4B81BEBC67600F57441 /* Build configuration list for PBXNativeTarget "Sophilina" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A343E4B91BEBC67600F57441 /* Debug */,
+				A343E4BA1BEBC67600F57441 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		A343E4BB1BEBC67600F57441 /* Build configuration list for PBXNativeTarget "SophilinaTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A343E4BC1BEBC67600F57441 /* Debug */,
+				A343E4BD1BEBC67600F57441 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		A343E4BE1BEBC67600F57441 /* Build configuration list for PBXNativeTarget "SophilinaUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A343E4BF1BEBC67600F57441 /* Debug */,
+				A343E4C01BEBC67600F57441 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = A343E4801BEBC67600F57441 /* Project object */;
+}
