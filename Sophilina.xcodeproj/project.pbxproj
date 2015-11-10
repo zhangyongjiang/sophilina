@@ -57,6 +57,18 @@
 		A3196C9C1BF1744E008F47D2 /* signin-bg@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = A3196C9A1BF1744E008F47D2 /* signin-bg@3x.png */; };
 		A3196C9F1BF174B1008F47D2 /* signup-bg@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = A3196C9D1BF174B1008F47D2 /* signup-bg@2x.png */; };
 		A3196CA01BF174B1008F47D2 /* signup-bg@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = A3196C9E1BF174B1008F47D2 /* signup-bg@3x.png */; };
+		A3196CA51BF1C02C008F47D2 /* attachment-active@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = A3196CA11BF1C02C008F47D2 /* attachment-active@2x.png */; };
+		A3196CA61BF1C02C008F47D2 /* attachment-active@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = A3196CA21BF1C02C008F47D2 /* attachment-active@3x.png */; };
+		A3196CA71BF1C02C008F47D2 /* attachment@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = A3196CA31BF1C02C008F47D2 /* attachment@2x.png */; };
+		A3196CA81BF1C02C008F47D2 /* attachment@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = A3196CA41BF1C02C008F47D2 /* attachment@3x.png */; };
+		A3196CB21BF1C062008F47D2 /* gotham-rounded-bold-italic.otf in Resources */ = {isa = PBXBuildFile; fileRef = A3196CAA1BF1C062008F47D2 /* gotham-rounded-bold-italic.otf */; };
+		A3196CB31BF1C062008F47D2 /* Gotham-Rounded-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = A3196CAB1BF1C062008F47D2 /* Gotham-Rounded-Bold.ttf */; };
+		A3196CB41BF1C062008F47D2 /* gotham-rounded-book-italic.otf in Resources */ = {isa = PBXBuildFile; fileRef = A3196CAC1BF1C062008F47D2 /* gotham-rounded-book-italic.otf */; };
+		A3196CB51BF1C062008F47D2 /* gotham-rounded-book.otf in Resources */ = {isa = PBXBuildFile; fileRef = A3196CAD1BF1C062008F47D2 /* gotham-rounded-book.otf */; };
+		A3196CB61BF1C062008F47D2 /* Gotham-Rounded-Light-Italic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = A3196CAE1BF1C062008F47D2 /* Gotham-Rounded-Light-Italic.ttf */; };
+		A3196CB71BF1C062008F47D2 /* Gotham-Rounded-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = A3196CAF1BF1C062008F47D2 /* Gotham-Rounded-Light.ttf */; };
+		A3196CB81BF1C062008F47D2 /* Gotham-Rounded-Medium-Italic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = A3196CB01BF1C062008F47D2 /* Gotham-Rounded-Medium-Italic.ttf */; };
+		A3196CB91BF1C062008F47D2 /* Gotham-Rounded-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = A3196CB11BF1C062008F47D2 /* Gotham-Rounded-Medium.ttf */; };
 		A343E48D1BEBC67600F57441 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = A343E48C1BEBC67600F57441 /* main.m */; };
 		A343E4901BEBC67600F57441 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = A343E48F1BEBC67600F57441 /* AppDelegate.m */; };
 		A343E4931BEBC67600F57441 /* MasterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A343E4921BEBC67600F57441 /* MasterViewController.m */; };
@@ -311,6 +323,18 @@
 		A3196C9A1BF1744E008F47D2 /* signin-bg@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "signin-bg@3x.png"; sourceTree = "<group>"; };
 		A3196C9D1BF174B1008F47D2 /* signup-bg@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "signup-bg@2x.png"; sourceTree = "<group>"; };
 		A3196C9E1BF174B1008F47D2 /* signup-bg@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "signup-bg@3x.png"; sourceTree = "<group>"; };
+		A3196CA11BF1C02C008F47D2 /* attachment-active@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "attachment-active@2x.png"; sourceTree = "<group>"; };
+		A3196CA21BF1C02C008F47D2 /* attachment-active@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "attachment-active@3x.png"; sourceTree = "<group>"; };
+		A3196CA31BF1C02C008F47D2 /* attachment@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "attachment@2x.png"; sourceTree = "<group>"; };
+		A3196CA41BF1C02C008F47D2 /* attachment@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "attachment@3x.png"; sourceTree = "<group>"; };
+		A3196CAA1BF1C062008F47D2 /* gotham-rounded-bold-italic.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "gotham-rounded-bold-italic.otf"; sourceTree = "<group>"; };
+		A3196CAB1BF1C062008F47D2 /* Gotham-Rounded-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Gotham-Rounded-Bold.ttf"; sourceTree = "<group>"; };
+		A3196CAC1BF1C062008F47D2 /* gotham-rounded-book-italic.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "gotham-rounded-book-italic.otf"; sourceTree = "<group>"; };
+		A3196CAD1BF1C062008F47D2 /* gotham-rounded-book.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "gotham-rounded-book.otf"; sourceTree = "<group>"; };
+		A3196CAE1BF1C062008F47D2 /* Gotham-Rounded-Light-Italic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Gotham-Rounded-Light-Italic.ttf"; sourceTree = "<group>"; };
+		A3196CAF1BF1C062008F47D2 /* Gotham-Rounded-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Gotham-Rounded-Light.ttf"; sourceTree = "<group>"; };
+		A3196CB01BF1C062008F47D2 /* Gotham-Rounded-Medium-Italic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Gotham-Rounded-Medium-Italic.ttf"; sourceTree = "<group>"; };
+		A3196CB11BF1C062008F47D2 /* Gotham-Rounded-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Gotham-Rounded-Medium.ttf"; sourceTree = "<group>"; };
 		A343E4881BEBC67600F57441 /* Sophilina.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Sophilina.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A343E48C1BEBC67600F57441 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		A343E48E1BEBC67600F57441 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -791,6 +815,11 @@
 		A3196C751BED9715008F47D2 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				A3196CA91BF1C062008F47D2 /* fonts */,
+				A3196CA11BF1C02C008F47D2 /* attachment-active@2x.png */,
+				A3196CA21BF1C02C008F47D2 /* attachment-active@3x.png */,
+				A3196CA31BF1C02C008F47D2 /* attachment@2x.png */,
+				A3196CA41BF1C02C008F47D2 /* attachment@3x.png */,
 				A3196C7E1BED992F008F47D2 /* menu-active@2x.png */,
 				A3196C7F1BED992F008F47D2 /* menu-active@3x.png */,
 				A3196C801BED992F008F47D2 /* menu@2x.png */,
@@ -833,6 +862,21 @@
 				A3196C921BF1602E008F47D2 /* WelcomeViewController.m */,
 			);
 			path = Welcome;
+			sourceTree = "<group>";
+		};
+		A3196CA91BF1C062008F47D2 /* fonts */ = {
+			isa = PBXGroup;
+			children = (
+				A3196CAA1BF1C062008F47D2 /* gotham-rounded-bold-italic.otf */,
+				A3196CAB1BF1C062008F47D2 /* Gotham-Rounded-Bold.ttf */,
+				A3196CAC1BF1C062008F47D2 /* gotham-rounded-book-italic.otf */,
+				A3196CAD1BF1C062008F47D2 /* gotham-rounded-book.otf */,
+				A3196CAE1BF1C062008F47D2 /* Gotham-Rounded-Light-Italic.ttf */,
+				A3196CAF1BF1C062008F47D2 /* Gotham-Rounded-Light.ttf */,
+				A3196CB01BF1C062008F47D2 /* Gotham-Rounded-Medium-Italic.ttf */,
+				A3196CB11BF1C062008F47D2 /* Gotham-Rounded-Medium.ttf */,
+			);
+			path = fonts;
 			sourceTree = "<group>";
 		};
 		A343E47F1BEBC67600F57441 = {
@@ -1469,9 +1513,17 @@
 			buildActionMask = 2147483647;
 			files = (
 				A3196C851BED992F008F47D2 /* menu@3x.png in Resources */,
+				A3196CB61BF1C062008F47D2 /* Gotham-Rounded-Light-Italic.ttf in Resources */,
+				A3196CB81BF1C062008F47D2 /* Gotham-Rounded-Medium-Italic.ttf in Resources */,
+				A3196CB31BF1C062008F47D2 /* Gotham-Rounded-Bold.ttf in Resources */,
+				A3196CB41BF1C062008F47D2 /* gotham-rounded-book-italic.otf in Resources */,
 				A343E49E1BEBC67600F57441 /* LaunchScreen.storyboard in Resources */,
 				A3196C7D1BED9715008F47D2 /* back@3x.png in Resources */,
+				A3196CA71BF1C02C008F47D2 /* attachment@2x.png in Resources */,
+				A3196CA81BF1C02C008F47D2 /* attachment@3x.png in Resources */,
+				A3196CA61BF1C02C008F47D2 /* attachment-active@3x.png in Resources */,
 				A343E58C1BEBEDA400F57441 /* full-star@3x.png in Resources */,
+				A3196CB91BF1C062008F47D2 /* Gotham-Rounded-Medium.ttf in Resources */,
 				A343E49B1BEBC67600F57441 /* Assets.xcassets in Resources */,
 				A3196C831BED992F008F47D2 /* menu-active@3x.png in Resources */,
 				A3196C7A1BED9715008F47D2 /* back-active@2x.png in Resources */,
@@ -1485,12 +1537,16 @@
 				A343E5901BEBEDA400F57441 /* half-star@3x.png in Resources */,
 				A343E58D1BEBEDA400F57441 /* gray-star@3x.png in Resources */,
 				A3196C821BED992F008F47D2 /* menu-active@2x.png in Resources */,
+				A3196CB21BF1C062008F47D2 /* gotham-rounded-bold-italic.otf in Resources */,
 				A3196C841BED992F008F47D2 /* menu@2x.png in Resources */,
 				A3196C9C1BF1744E008F47D2 /* signin-bg@3x.png in Resources */,
 				A3196C981BF16DA1008F47D2 /* welcome@3x.png in Resources */,
+				A3196CB71BF1C062008F47D2 /* Gotham-Rounded-Light.ttf in Resources */,
 				A343E58B1BEBEDA400F57441 /* full-star@2x.png in Resources */,
 				A343E58F1BEBEDA400F57441 /* half-star@2x.png in Resources */,
 				A3196C9B1BF1744E008F47D2 /* signin-bg@2x.png in Resources */,
+				A3196CB51BF1C062008F47D2 /* gotham-rounded-book.otf in Resources */,
+				A3196CA51BF1C02C008F47D2 /* attachment-active@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

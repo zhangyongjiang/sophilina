@@ -51,6 +51,16 @@
 		<key>NSAllowsArbitraryLoads</key>
 		<true/>
 	</dict>
-
+        <key>UIAppFonts</key>
+        <array>
+                <string>Gotham-Rounded-Medium.ttf</string>
+                <string>gotham-rounded-book.otf</string>
+                <string>gotham-rounded-bold-italic.otf</string>
+                <string>Gotham-Rounded-Bold.ttf</string>
+                <string>gotham-rounded-book-italic.otf</string>
+                <string>Gotham-Rounded-Light-Italic.ttf</string>
+                <string>Gotham-Rounded-Light.ttf</string>
+                <string>Gotham-Rounded-Medium-Italic.ttf</string>
+        </array>
 </dict>
 </plist>

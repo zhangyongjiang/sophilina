@@ -431,10 +431,10 @@
 
 -(void)setupStyle {
     [[UINavigationBar appearance]setShadowImage:[[UIImage alloc] init]];
-//    NSDictionary *barButtonAppearanceDict = @{NSFontAttributeName : [UIFont fontWithName:@"GothamRounded-Light" size:15.0], NSForegroundColorAttributeName: [UIColor colorFromString:@"nsred"]};
-//    [[UIBarButtonItem appearance] setTitleTextAttributes:barButtonAppearanceDict forState:UIControlStateNormal];
+    NSDictionary *barButtonAppearanceDict = @{NSFontAttributeName : [UIFont fontWithName:@"GothamRounded-Light" size:15.0], NSForegroundColorAttributeName: [UIColor colorFromString:@"nsred"]};
+    [[UIBarButtonItem appearance] setTitleTextAttributes:barButtonAppearanceDict forState:UIControlStateNormal];
     
-    //    [[UINavigationBar appearance] setBackgroundImage:[[UIImage alloc] init] forBarMetrics:UIBarMetricsDefault];
+        [[UINavigationBar appearance] setBackgroundImage:[[UIImage alloc] init] forBarMetrics:UIBarMetricsDefault];
     
     [[UINavigationBar appearance] setBackIndicatorImage:[UIImage imageNamed:@"back"]];
     [[UINavigationBar appearance] setBackIndicatorTransitionMaskImage:[UIImage imageNamed:@"back-active"]];
