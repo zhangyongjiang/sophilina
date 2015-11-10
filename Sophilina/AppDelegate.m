@@ -71,12 +71,12 @@
     else {
         [self askForNotification];
         
-//        if ([NSUserDefaults savedUser]) {
+        if ([NSUserDefaults savedUser]) {
             [self startPage:[[HomeViewController alloc] init]];
-//        }
-//        else {
-//            [self startWelcomePage:NO];
-//        }
+        }
+        else {
+            [self startWelcomePage:NO];
+        }
     }
     
     [self checkUserLogin];
