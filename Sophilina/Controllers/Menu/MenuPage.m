@@ -17,6 +17,8 @@
     self.tableData = [[SimpleTableViewData alloc] initWithSections:
             [[SimpleTableViewSection alloc] initWithHeader:@"Test"
                                                    andRows:@"Open Raved"
+             , @"Login"
+             , @"Logout"
              , @"About Us"
                 , nil],
                       nil]

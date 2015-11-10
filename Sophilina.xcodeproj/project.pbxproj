@@ -53,6 +53,10 @@
 		A3196C941BF1602E008F47D2 /* WelcomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A3196C921BF1602E008F47D2 /* WelcomeViewController.m */; };
 		A3196C971BF16DA1008F47D2 /* welcome@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = A3196C951BF16DA1008F47D2 /* welcome@2x.png */; };
 		A3196C981BF16DA1008F47D2 /* welcome@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = A3196C961BF16DA1008F47D2 /* welcome@3x.png */; };
+		A3196C9B1BF1744E008F47D2 /* signin-bg@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = A3196C991BF1744E008F47D2 /* signin-bg@2x.png */; };
+		A3196C9C1BF1744E008F47D2 /* signin-bg@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = A3196C9A1BF1744E008F47D2 /* signin-bg@3x.png */; };
+		A3196C9F1BF174B1008F47D2 /* signup-bg@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = A3196C9D1BF174B1008F47D2 /* signup-bg@2x.png */; };
+		A3196CA01BF174B1008F47D2 /* signup-bg@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = A3196C9E1BF174B1008F47D2 /* signup-bg@3x.png */; };
 		A343E48D1BEBC67600F57441 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = A343E48C1BEBC67600F57441 /* main.m */; };
 		A343E4901BEBC67600F57441 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = A343E48F1BEBC67600F57441 /* AppDelegate.m */; };
 		A343E4931BEBC67600F57441 /* MasterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A343E4921BEBC67600F57441 /* MasterViewController.m */; };
@@ -303,6 +307,10 @@
 		A3196C921BF1602E008F47D2 /* WelcomeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WelcomeViewController.m; sourceTree = "<group>"; };
 		A3196C951BF16DA1008F47D2 /* welcome@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "welcome@2x.png"; sourceTree = "<group>"; };
 		A3196C961BF16DA1008F47D2 /* welcome@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "welcome@3x.png"; sourceTree = "<group>"; };
+		A3196C991BF1744E008F47D2 /* signin-bg@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "signin-bg@2x.png"; sourceTree = "<group>"; };
+		A3196C9A1BF1744E008F47D2 /* signin-bg@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "signin-bg@3x.png"; sourceTree = "<group>"; };
+		A3196C9D1BF174B1008F47D2 /* signup-bg@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "signup-bg@2x.png"; sourceTree = "<group>"; };
+		A3196C9E1BF174B1008F47D2 /* signup-bg@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "signup-bg@3x.png"; sourceTree = "<group>"; };
 		A343E4881BEBC67600F57441 /* Sophilina.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Sophilina.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A343E48C1BEBC67600F57441 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		A343E48E1BEBC67600F57441 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -682,6 +690,8 @@
 		A3196BF71BEC2D0F008F47D2 /* Signin */ = {
 			isa = PBXGroup;
 			children = (
+				A3196C991BF1744E008F47D2 /* signin-bg@2x.png */,
+				A3196C9A1BF1744E008F47D2 /* signin-bg@3x.png */,
 				A3196BF81BEC2D0F008F47D2 /* SigninPage.h */,
 				A3196BF91BEC2D0F008F47D2 /* SigninPage.m */,
 				A3196BFA1BEC2D0F008F47D2 /* SigninViewController.h */,
@@ -693,6 +703,8 @@
 		A3196BFC1BEC2D0F008F47D2 /* Signup */ = {
 			isa = PBXGroup;
 			children = (
+				A3196C9D1BF174B1008F47D2 /* signup-bg@2x.png */,
+				A3196C9E1BF174B1008F47D2 /* signup-bg@3x.png */,
 				A3196BFD1BEC2D0F008F47D2 /* SignupPage.h */,
 				A3196BFE1BEC2D0F008F47D2 /* SignupPage.m */,
 				A3196BFF1BEC2D0F008F47D2 /* SignupViewController.h */,
@@ -1463,7 +1475,9 @@
 				A343E49B1BEBC67600F57441 /* Assets.xcassets in Resources */,
 				A3196C831BED992F008F47D2 /* menu-active@3x.png in Resources */,
 				A3196C7A1BED9715008F47D2 /* back-active@2x.png in Resources */,
+				A3196C9F1BF174B1008F47D2 /* signup-bg@2x.png in Resources */,
 				A343E58E1BEBEDA400F57441 /* grey-star@2x.png in Resources */,
+				A3196CA01BF174B1008F47D2 /* signup-bg@3x.png in Resources */,
 				A3196C7C1BED9715008F47D2 /* back@2x.png in Resources */,
 				A3196C971BF16DA1008F47D2 /* welcome@2x.png in Resources */,
 				A343E4991BEBC67600F57441 /* Main.storyboard in Resources */,
@@ -1472,9 +1486,11 @@
 				A343E58D1BEBEDA400F57441 /* gray-star@3x.png in Resources */,
 				A3196C821BED992F008F47D2 /* menu-active@2x.png in Resources */,
 				A3196C841BED992F008F47D2 /* menu@2x.png in Resources */,
+				A3196C9C1BF1744E008F47D2 /* signin-bg@3x.png in Resources */,
 				A3196C981BF16DA1008F47D2 /* welcome@3x.png in Resources */,
 				A343E58B1BEBEDA400F57441 /* full-star@2x.png in Resources */,
 				A343E58F1BEBEDA400F57441 /* half-star@2x.png in Resources */,
+				A3196C9B1BF1744E008F47D2 /* signin-bg@2x.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

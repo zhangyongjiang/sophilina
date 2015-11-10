@@ -34,9 +34,24 @@
     [super viewWillAppear:animated];
     
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(postProduct:) name:@"Post" object:nil];
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(logout:) name:@"Logout" object:nil];
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(login:) name:@"Login" object:nil];
 }
 
 -(void)postProduct:(NSNotification *) notification  {
 }
+
+-(void)logout:(NSNotification *) notification  {
+    [WebService UserAPI_Logout:^(GenericResponse *resp) {
+        [[AppDelegate getInstance] startWelcomePage:NO];
+    } onError:^(APIError *err) {
+        
+    }];
+}
+
+-(void)login:(NSNotification *) notification  {
+    [[AppDelegate getInstance] startWelcomePage:YES];
+}
+
 
 @end
