@@ -9,6 +9,7 @@
 #import "MenuViewController.h"
 #import "MenuPage.h"
 #import "UIImage+ImageEffects.h"
+#import "CreateProductViewController.h"
 
 @interface MenuViewController() <UINavigationControllerDelegate, UIImagePickerControllerDelegate>
 
@@ -39,6 +40,8 @@
 }
 
 -(void)postProduct:(NSNotification *) notification  {
+    CreateProductViewController* controller = [[CreateProductViewController alloc] init];
+    [[AppDelegate getInstance] pushViewController:controller];
 }
 
 -(void)logout:(NSNotification *) notification  {

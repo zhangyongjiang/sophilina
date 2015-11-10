@@ -13,7 +13,7 @@
 @property(strong, nonatomic)FormTextField* lastNameField;
 @property(strong, nonatomic)FormTextField* emailField;
 @property(strong, nonatomic)FormTextField* passwordField;
-@property(strong, nonatomic)FormTextField* genderField;
+//@property(strong, nonatomic)FormTextField* genderField;
 @property(strong, nonatomic)UserImageView* userImgView;
 @property(strong, nonatomic)FitLabel* clickToUploadLabel;
 @property(strong, nonatomic)FitLabel* tosLabel;

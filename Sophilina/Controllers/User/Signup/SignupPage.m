@@ -10,7 +10,7 @@
 
 @interface SignupPage() <UINavigationControllerDelegate, UIImagePickerControllerDelegate, UIPickerViewDataSource, UIPickerViewDelegate>
 @property(strong, nonatomic)UIView* avatarRow;
-@property(strong,nonatomic)UIPickerView* pickerView;
+//@property(strong,nonatomic)UIPickerView* pickerView;
 @end
 
 @implementation SignupPage
@@ -25,12 +25,12 @@
     
     self.headerLabel.text = @"Sign Up";
     
-    self.pickerView = [[UIPickerView alloc] initWithFrame:CGRectMake(0, 0, [UIView screenWidth], 50)];
-    self.pickerView.accessibilityLabel = @"pickerView";
-    self.pickerView.delegate = self;
-    self.pickerView.dataSource = self;
-    self.pickerView.backgroundColor = [UIColor lightGrayColor];
-    [self.pickerView selectRow:1 inComponent:0 animated:NO];
+//    self.pickerView = [[UIPickerView alloc] initWithFrame:CGRectMake(0, 0, [UIView screenWidth], 50)];
+//    self.pickerView.accessibilityLabel = @"pickerView";
+//    self.pickerView.delegate = self;
+//    self.pickerView.dataSource = self;
+//    self.pickerView.backgroundColor = [UIColor lightGrayColor];
+//    [self.pickerView selectRow:1 inComponent:0 animated:NO];
     
     self.firstNameField = [[FormTextField alloc] init];
     self.firstNameField.accessibilityLabel = @"firstNameField";
@@ -55,11 +55,11 @@
     self.passwordField.width = FullWidthExcludePadding;
     [self.scrollView addSubview:self.passwordField];
     
-    self.genderField = [[FullWidthField alloc] init];
-    self.genderField.accessibilityLabel = @"genderField";
-    self.genderField.placeholder = @"Gender (optional)";
-    [self.scrollView addSubview:self.genderField];
-    self.genderField.inputView = self.pickerView;
+//    self.genderField = [[FullWidthField alloc] init];
+//    self.genderField.accessibilityLabel = @"genderField";
+//    self.genderField.placeholder = @"Gender (optional)";
+//    [self.scrollView addSubview:self.genderField];
+//    self.genderField.inputView = self.pickerView;
     
     self.avatarRow = [[UIView alloc] init];
     self.avatarRow.backgroundColor = [UIColor whiteColor];
@@ -80,15 +80,15 @@
     self.lastNameField.y = FormTopMargin;
     [self.lastNameField alignParentRightWithMarghin:PagePadding];
     
-    [UIView setLeftMargin:PagePadding views:self.firstNameField, self.emailField, self.passwordField, self.genderField, self.avatarRow, nil];
-    [UIView top2bottomWithMargin:1 views:self.firstNameField, self.emailField, self.passwordField, self.genderField, self.avatarRow, nil];
+    [UIView setLeftMargin:PagePadding views:self.firstNameField, self.emailField, self.passwordField, /*self.genderField,*/ self.avatarRow, nil];
+    [UIView top2bottomWithMargin:1 views:self.firstNameField, self.emailField, self.passwordField, /*self.genderField, */ self.avatarRow, nil];
     
     [self.userImgView vcenterInParent];
     self.userImgView.x = PagePadding * [UIView scale];
     [self.clickToUploadLabel vcenterInParent];
     [self.clickToUploadLabel rightOfView:self.userImgView withMargin:PagePadding * [UIView scale]];
     
-    UIView* containerView = [self maskViews:[NSArray arrayWithObjects:self.firstNameField, self.lastNameField, self.emailField, self.passwordField, self.genderField, self.avatarRow, nil]];
+    UIView* containerView = [self maskViews:[NSArray arrayWithObjects:self.firstNameField, self.lastNameField, self.emailField, self.passwordField/*, self.genderField*/, self.avatarRow, nil]];
     [self.scrollView addSubview:containerView];
     
     
@@ -138,13 +138,13 @@
 }
 
 - (void)pickerView:(UIPickerView *)pickerView didSelectRow: (NSInteger)row inComponent:(NSInteger)component {
-    if(row == 0)
-        self.genderField.text = @"Not to Say";
-    else if(row == 1)
-        self.genderField.text = @"Male";
-    else
-        self.genderField.text = @"Female";
-    [self.genderField endEditing:YES];
+//    if(row == 0)
+//        self.genderField.text = @"Not to Say";
+//    else if(row == 1)
+//        self.genderField.text = @"Male";
+//    else
+//        self.genderField.text = @"Female";
+//    [self.genderField endEditing:YES];
 }
 
 - (NSInteger)pickerView:(UIPickerView *)pickerView numberOfRowsInComponent:(NSInteger)component {

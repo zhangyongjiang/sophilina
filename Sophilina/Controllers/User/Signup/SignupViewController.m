@@ -37,7 +37,7 @@
     req.lastName = self.page.lastNameField.text;
     req.email = self.page.emailField.text;
     req.password = self.page.passwordField.text;
-    req.gender = self.page.genderField.text;
+//    req.gender = self.page.genderField.text;
     if (req.gender.length == 0 ) {
         req.gender = nil;
     }

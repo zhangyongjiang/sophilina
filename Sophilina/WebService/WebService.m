@@ -12,7 +12,7 @@
 #import "TMCache.h"
 
 static WebService* instance;
-static BOOL useLocalHost = NO;
+static BOOL useLocalHost = YES;
 static BOOL useStaging = NO;
 
 @interface WebService()
@@ -35,7 +35,7 @@ static BOOL useStaging = NO;
 + (NSString *)baseUrl
 {
     if (useLocalHost) {
-        return @"http://localhost:9090/api";
+        return @"http://localhost:9090";
     }
     else if(useStaging){
         return @"http://api.onsalelocal.com";
