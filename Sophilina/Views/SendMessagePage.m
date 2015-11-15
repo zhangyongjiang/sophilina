@@ -33,7 +33,7 @@
     self.textFieldContent.textContainer.lineFragmentPadding = PagePadding;
     [self.scrollView addSubviewV:self.textFieldContent margin:FieldVMargin];
     
-    self.cameraView = [[UIImageView alloc] initWithFrame:CGRectMake(PagePadding, self.textFieldContent.bottom+PagePadding, 40, 40)];
+    self.cameraView = [[UIImageView alloc] initWithFrame:CGRectMake(PagePadding, self.textFieldContent.bottom+PagePadding*2, 40, 40)];
     self.cameraView.image = [UIImage imageNamed:@"attachment"];
     self.cameraView.contentMode = UIViewContentModeCenter;
     [self.scrollView addSubview:self.cameraView];

@@ -516,6 +516,24 @@
 	               }];
 }
 
++(AFHTTPRequestOperation*) ProductAPI_CreateProduct:(Product*)prod onSuccess:(void (^)(Product *resp))successBlock onError:(void (^)(APIError *err))errorBlock {
+    NSString* url = @"ws/product/create";
+    return [[WebService getOperationManager] POST:url
+	            parameters:[prod toDictionary]
+	               success:^(AFHTTPRequestOperation *operation, id responseObject) {
+	                   ObjectMapper *mapper = [ObjectMapper mapper];
+	                   NSError *error;
+	                   Product* resp = [mapper mapObject:responseObject toClass:[Product class] withError:&error];
+	                   if (error) {
+	                       errorBlock([[APIError alloc] initWithOperation:operation andError:error]);
+	                   } else { 
+	                       successBlock(resp);
+	                   }
+	               } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
+	                   errorBlock([[APIError alloc] initWithOperation:operation andError:error]);
+	               }];
+}
+
 +(AFHTTPRequestOperation*) ProductAPI_RemoveImage:(NSString*)productId imgIndex:(NSNumber*)imgIndex onSuccess:(void (^)(Product *resp))successBlock onError:(void (^)(APIError *err))errorBlock {
     NSString* url = @"ws/product/remove-image/{productId}/{imgIndex}";
     url = [url stringByReplacingOccurrencesOfString:@"{productId}" withString:[productId description]];
@@ -815,6 +833,98 @@
 	               }];
 }
 
++(AFHTTPRequestOperation*) UserAPI_ChangePassword:(ChangePasswordRequest*)req onSuccess:(void (^)(GenericResponse *resp))successBlock onError:(void (^)(APIError *err))errorBlock {
+    NSString* url = @"ws/user/change-password";
+    return [[WebService getOperationManager] POST:url
+	            parameters:[req toDictionary]
+	               success:^(AFHTTPRequestOperation *operation, id responseObject) {
+	                   ObjectMapper *mapper = [ObjectMapper mapper];
+	                   NSError *error;
+	                   GenericResponse* resp = [mapper mapObject:responseObject toClass:[GenericResponse class] withError:&error];
+	                   if (error) {
+	                       errorBlock([[APIError alloc] initWithOperation:operation andError:error]);
+	                   } else { 
+	                       successBlock(resp);
+	                   }
+	               } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
+	                   errorBlock([[APIError alloc] initWithOperation:operation andError:error]);
+	               }];
+}
+
++(AFHTTPRequestOperation*) UserAPI_ResetPassword:(LoginRequest*)req onSuccess:(void (^)(GenericResponse *resp))successBlock onError:(void (^)(APIError *err))errorBlock {
+    NSString* url = @"ws/user/reset-password";
+    return [[WebService getOperationManager] POST:url
+	            parameters:[req toDictionary]
+	               success:^(AFHTTPRequestOperation *operation, id responseObject) {
+	                   ObjectMapper *mapper = [ObjectMapper mapper];
+	                   NSError *error;
+	                   GenericResponse* resp = [mapper mapObject:responseObject toClass:[GenericResponse class] withError:&error];
+	                   if (error) {
+	                       errorBlock([[APIError alloc] initWithOperation:operation andError:error]);
+	                   } else { 
+	                       successBlock(resp);
+	                   }
+	               } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
+	                   errorBlock([[APIError alloc] initWithOperation:operation andError:error]);
+	               }];
+}
+
++(AFHTTPRequestOperation*) UserAPI_Me:(void (^)(User *resp))successBlock onError:(void (^)(APIError *err))errorBlock {
+    NSString* url = @"ws/user/me";
+    return [[WebService getOperationManager] GET:url
+	            parameters:nil
+	               success:^(AFHTTPRequestOperation *operation, id responseObject) {
+	                   ObjectMapper *mapper = [ObjectMapper mapper];
+	                   NSError *error;
+	                   User* resp = [mapper mapObject:responseObject toClass:[User class] withError:&error];
+	                   if (error) {
+	                       errorBlock([[APIError alloc] initWithOperation:operation andError:error]);
+	                   } else { 
+	                       successBlock(resp);
+	                   }
+	               } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
+	                   errorBlock([[APIError alloc] initWithOperation:operation andError:error]);
+	               }];
+}
+
++(AFHTTPRequestOperation*) UserAPI_SetAsAgent:(NSString*)agentId onSuccess:(void (^)(GenericResponse *resp))successBlock onError:(void (^)(APIError *err))errorBlock {
+    NSString* url = @"ws/user/set-as-agent/{agentId}";
+    url = [url stringByReplacingOccurrencesOfString:@"{agentId}" withString:[agentId description]];
+    return [[WebService getOperationManager] POST:url
+	            parameters:nil
+	               success:^(AFHTTPRequestOperation *operation, id responseObject) {
+	                   ObjectMapper *mapper = [ObjectMapper mapper];
+	                   NSError *error;
+	                   GenericResponse* resp = [mapper mapObject:responseObject toClass:[GenericResponse class] withError:&error];
+	                   if (error) {
+	                       errorBlock([[APIError alloc] initWithOperation:operation andError:error]);
+	                   } else { 
+	                       successBlock(resp);
+	                   }
+	               } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
+	                   errorBlock([[APIError alloc] initWithOperation:operation andError:error]);
+	               }];
+}
+
++(AFHTTPRequestOperation*) UserAPI_GetUserDetails:(NSString*)userId onSuccess:(void (^)(UserInfo *resp))successBlock onError:(void (^)(APIError *err))errorBlock {
+    NSString* url = @"ws/user/profile/{userId}";
+    url = [url stringByReplacingOccurrencesOfString:@"{userId}" withString:[userId description]];
+    return [[WebService getOperationManager] GET:url
+	            parameters:nil
+	               success:^(AFHTTPRequestOperation *operation, id responseObject) {
+	                   ObjectMapper *mapper = [ObjectMapper mapper];
+	                   NSError *error;
+	                   UserInfo* resp = [mapper mapObject:responseObject toClass:[UserInfo class] withError:&error];
+	                   if (error) {
+	                       errorBlock([[APIError alloc] initWithOperation:operation andError:error]);
+	                   } else { 
+	                       successBlock(resp);
+	                   }
+	               } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
+	                   errorBlock([[APIError alloc] initWithOperation:operation andError:error]);
+	               }];
+}
+
 +(AFHTTPRequestOperation*) UserAPI_Login:(NSString*)email password:(NSString*)password onSuccess:(void (^)(User *resp))successBlock onError:(void (^)(APIError *err))errorBlock {
     NSString* url = @"ws/user/login";
     NSMutableDictionary* dict = [[NSMutableDictionary alloc] init];
@@ -862,98 +972,6 @@
 	                   ObjectMapper *mapper = [ObjectMapper mapper];
 	                   NSError *error;
 	                   GenericResponse* resp = [mapper mapObject:responseObject toClass:[GenericResponse class] withError:&error];
-	                   if (error) {
-	                       errorBlock([[APIError alloc] initWithOperation:operation andError:error]);
-	                   } else { 
-	                       successBlock(resp);
-	                   }
-	               } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
-	                   errorBlock([[APIError alloc] initWithOperation:operation andError:error]);
-	               }];
-}
-
-+(AFHTTPRequestOperation*) UserAPI_Me:(void (^)(User *resp))successBlock onError:(void (^)(APIError *err))errorBlock {
-    NSString* url = @"ws/user/me";
-    return [[WebService getOperationManager] GET:url
-	            parameters:nil
-	               success:^(AFHTTPRequestOperation *operation, id responseObject) {
-	                   ObjectMapper *mapper = [ObjectMapper mapper];
-	                   NSError *error;
-	                   User* resp = [mapper mapObject:responseObject toClass:[User class] withError:&error];
-	                   if (error) {
-	                       errorBlock([[APIError alloc] initWithOperation:operation andError:error]);
-	                   } else { 
-	                       successBlock(resp);
-	                   }
-	               } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
-	                   errorBlock([[APIError alloc] initWithOperation:operation andError:error]);
-	               }];
-}
-
-+(AFHTTPRequestOperation*) UserAPI_ChangePassword:(ChangePasswordRequest*)req onSuccess:(void (^)(GenericResponse *resp))successBlock onError:(void (^)(APIError *err))errorBlock {
-    NSString* url = @"ws/user/change-password";
-    return [[WebService getOperationManager] POST:url
-	            parameters:[req toDictionary]
-	               success:^(AFHTTPRequestOperation *operation, id responseObject) {
-	                   ObjectMapper *mapper = [ObjectMapper mapper];
-	                   NSError *error;
-	                   GenericResponse* resp = [mapper mapObject:responseObject toClass:[GenericResponse class] withError:&error];
-	                   if (error) {
-	                       errorBlock([[APIError alloc] initWithOperation:operation andError:error]);
-	                   } else { 
-	                       successBlock(resp);
-	                   }
-	               } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
-	                   errorBlock([[APIError alloc] initWithOperation:operation andError:error]);
-	               }];
-}
-
-+(AFHTTPRequestOperation*) UserAPI_ResetPassword:(LoginRequest*)req onSuccess:(void (^)(GenericResponse *resp))successBlock onError:(void (^)(APIError *err))errorBlock {
-    NSString* url = @"ws/user/reset-password";
-    return [[WebService getOperationManager] POST:url
-	            parameters:[req toDictionary]
-	               success:^(AFHTTPRequestOperation *operation, id responseObject) {
-	                   ObjectMapper *mapper = [ObjectMapper mapper];
-	                   NSError *error;
-	                   GenericResponse* resp = [mapper mapObject:responseObject toClass:[GenericResponse class] withError:&error];
-	                   if (error) {
-	                       errorBlock([[APIError alloc] initWithOperation:operation andError:error]);
-	                   } else { 
-	                       successBlock(resp);
-	                   }
-	               } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
-	                   errorBlock([[APIError alloc] initWithOperation:operation andError:error]);
-	               }];
-}
-
-+(AFHTTPRequestOperation*) UserAPI_SetAsAgent:(NSString*)agentId onSuccess:(void (^)(GenericResponse *resp))successBlock onError:(void (^)(APIError *err))errorBlock {
-    NSString* url = @"ws/user/set-as-agent/{agentId}";
-    url = [url stringByReplacingOccurrencesOfString:@"{agentId}" withString:[agentId description]];
-    return [[WebService getOperationManager] POST:url
-	            parameters:nil
-	               success:^(AFHTTPRequestOperation *operation, id responseObject) {
-	                   ObjectMapper *mapper = [ObjectMapper mapper];
-	                   NSError *error;
-	                   GenericResponse* resp = [mapper mapObject:responseObject toClass:[GenericResponse class] withError:&error];
-	                   if (error) {
-	                       errorBlock([[APIError alloc] initWithOperation:operation andError:error]);
-	                   } else { 
-	                       successBlock(resp);
-	                   }
-	               } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
-	                   errorBlock([[APIError alloc] initWithOperation:operation andError:error]);
-	               }];
-}
-
-+(AFHTTPRequestOperation*) UserAPI_GetUserDetails:(NSString*)userId onSuccess:(void (^)(UserInfo *resp))successBlock onError:(void (^)(APIError *err))errorBlock {
-    NSString* url = @"ws/user/profile/{userId}";
-    url = [url stringByReplacingOccurrencesOfString:@"{userId}" withString:[userId description]];
-    return [[WebService getOperationManager] GET:url
-	            parameters:nil
-	               success:^(AFHTTPRequestOperation *operation, id responseObject) {
-	                   ObjectMapper *mapper = [ObjectMapper mapper];
-	                   NSError *error;
-	                   UserInfo* resp = [mapper mapObject:responseObject toClass:[UserInfo class] withError:&error];
 	                   if (error) {
 	                       errorBlock([[APIError alloc] initWithOperation:operation andError:error]);
 	                   } else { 

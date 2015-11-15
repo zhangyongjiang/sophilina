@@ -5,7 +5,7 @@
 @interface CreateProductViewController () <UINavigationControllerDelegate, UIImagePickerControllerDelegate>
 
 @property(strong, nonatomic)CreateProductPage* page;
-@property(strong, nonatomic)Message* msg;
+@property(strong, nonatomic)Product* product;
 
 @end
 
@@ -30,7 +30,13 @@
     [self.page.cameraView addTarget:self action:@selector(selectImage)];
     [self.page.labelAttachment addTarget:self action:@selector(selectImage)];
     
-    self.msg = [[Message alloc] init];
+    self.product = [[Product alloc] init];
+    self.product.info = [[ProductInfo alloc] init];
+}
+
+-(void)viewWillAppear:(BOOL)animated {
+    [super viewWillAppear:animated];
+    self.title = @"Give Free";
 }
 
 -(void)selectImage {
@@ -50,7 +56,8 @@
 }
 
 -(void)sendMsg {
-    self.msg.content = self.page.textFieldContent.text;
+    self.product.info.name = self.page.textFieldSubject.text;
+    self.product.info._description = self.page.textFieldContent.text;
 }
 
 -(void)sendImages {
@@ -59,11 +66,11 @@
     }
     for (UIImageView* imgView in self.page.images) {
         [WebService upload:UIImagePNGRepresentation(imgView.image) onSuccess:^(Resource *resp) {
-            if (!self.msg.attachments) {
-                self.msg.attachments = [[NSMutableArray alloc] init];
+            if (!self.product.imgs) {
+                self.product.imgs = [[NSMutableArray alloc] init];
             }
-            [self.msg.attachments addObject:resp.path];
-            if (self.msg.attachments.count == self.page.images.count) {
+            [self.product.imgs addObject:resp.path];
+            if (self.product.imgs.count == self.page.images.count) {
                 [self sendMsg];
             }
         } onError:^(APIError *err) {

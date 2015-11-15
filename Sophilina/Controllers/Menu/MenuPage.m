@@ -15,9 +15,9 @@
     self = [super initWithFrame:frame];
     
     self.tableData = [[SimpleTableViewData alloc] initWithSections:
-            [[SimpleTableViewSection alloc] initWithHeader:@"Test"
-                                                   andRows:@"Open Raved"
-             , @"Post"
+            [[SimpleTableViewSection alloc] initWithHeader:nil
+                                                   andRows:
+             @"Post"
              , @"Login"
              , @"Logout"
              , @"About Us"

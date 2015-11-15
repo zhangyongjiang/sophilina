@@ -21,8 +21,8 @@
 #import "User.h"
 #import "RegisterRequest.h"
 #import "UserBasicInfo.h"
-#import "LoginRequest.h"
 #import "ChangePasswordRequest.h"
+#import "LoginRequest.h"
 #import "UserInfo.h"
 
 @interface ReuselocalApi : NSObject
@@ -81,6 +81,8 @@
 
 +(AFHTTPRequestOperation*) ProductAPI_Update:(NSString*)productId info:(ProductInfo*)info onSuccess:(void (^)(Product *resp))successBlock onError:(void (^)(APIError *err))errorBlock;
 
++(AFHTTPRequestOperation*) ProductAPI_CreateProduct:(Product*)prod onSuccess:(void (^)(Product *resp))successBlock onError:(void (^)(APIError *err))errorBlock;
+
 +(AFHTTPRequestOperation*) ProductAPI_RemoveImage:(NSString*)productId imgIndex:(NSNumber*)imgIndex onSuccess:(void (^)(Product *resp))successBlock onError:(void (^)(APIError *err))errorBlock;
 
 +(AFHTTPRequestOperation*) ProductAPI_Take:(NSString*)productId info:(ProductInfo*)info onSuccess:(void (^)(Product *resp))successBlock onError:(void (^)(APIError *err))errorBlock;
@@ -113,21 +115,21 @@
 
 +(AFHTTPRequestOperation*) UserAPI_Update:(UserBasicInfo*)info onSuccess:(void (^)(User *resp))successBlock onError:(void (^)(APIError *err))errorBlock;
 
++(AFHTTPRequestOperation*) UserAPI_ChangePassword:(ChangePasswordRequest*)req onSuccess:(void (^)(GenericResponse *resp))successBlock onError:(void (^)(APIError *err))errorBlock;
+
++(AFHTTPRequestOperation*) UserAPI_ResetPassword:(LoginRequest*)req onSuccess:(void (^)(GenericResponse *resp))successBlock onError:(void (^)(APIError *err))errorBlock;
+
++(AFHTTPRequestOperation*) UserAPI_Me:(void (^)(User *resp))successBlock onError:(void (^)(APIError *err))errorBlock;
+
++(AFHTTPRequestOperation*) UserAPI_SetAsAgent:(NSString*)agentId onSuccess:(void (^)(GenericResponse *resp))successBlock onError:(void (^)(APIError *err))errorBlock;
+
++(AFHTTPRequestOperation*) UserAPI_GetUserDetails:(NSString*)userId onSuccess:(void (^)(UserInfo *resp))successBlock onError:(void (^)(APIError *err))errorBlock;
+
 +(AFHTTPRequestOperation*) UserAPI_Login:(NSString*)email password:(NSString*)password onSuccess:(void (^)(User *resp))successBlock onError:(void (^)(APIError *err))errorBlock;
 
 +(AFHTTPRequestOperation*) UserAPI_Login:(LoginRequest*)req onSuccess:(void (^)(User *resp))successBlock onError:(void (^)(APIError *err))errorBlock;
 
 +(AFHTTPRequestOperation*) UserAPI_Logout:(void (^)(GenericResponse *resp))successBlock onError:(void (^)(APIError *err))errorBlock;
-
-+(AFHTTPRequestOperation*) UserAPI_Me:(void (^)(User *resp))successBlock onError:(void (^)(APIError *err))errorBlock;
-
-+(AFHTTPRequestOperation*) UserAPI_ChangePassword:(ChangePasswordRequest*)req onSuccess:(void (^)(GenericResponse *resp))successBlock onError:(void (^)(APIError *err))errorBlock;
-
-+(AFHTTPRequestOperation*) UserAPI_ResetPassword:(LoginRequest*)req onSuccess:(void (^)(GenericResponse *resp))successBlock onError:(void (^)(APIError *err))errorBlock;
-
-+(AFHTTPRequestOperation*) UserAPI_SetAsAgent:(NSString*)agentId onSuccess:(void (^)(GenericResponse *resp))successBlock onError:(void (^)(APIError *err))errorBlock;
-
-+(AFHTTPRequestOperation*) UserAPI_GetUserDetails:(NSString*)userId onSuccess:(void (^)(UserInfo *resp))successBlock onError:(void (^)(APIError *err))errorBlock;
 
 
 @end
