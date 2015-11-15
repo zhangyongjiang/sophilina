@@ -13,7 +13,7 @@
 
 @interface MenuViewController() <UINavigationControllerDelegate, UIImagePickerControllerDelegate>
 
-@property(strong,nonatomic)MenuPage* page;
+@property(strong,nonatomic)Page* page;
 
 @end
 
@@ -26,7 +26,13 @@
         UIView* navBar = self.navigationController.navigationBar;
         y = navBar.bottom;
     }
-    self.page = [[MenuPage alloc] initWithFrame:self.view.frame];
+    
+    if ([NSUserDefaults savedUser]) {
+        self.page = [[UserMenuPage alloc] initWithFrame:self.view.frame];
+    }
+    else {
+        self.page = [[GuestMenuPage alloc] initWithFrame:self.view.frame];
+    }
     self.page.y = y;
     [self.view addSubview:self.page];
 }
@@ -34,7 +40,7 @@
 -(void)viewWillAppear:(BOOL)animated {
     [super viewWillAppear:animated];
     
-    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(postProduct:) name:@"Post" object:nil];
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(postProduct:) name:@"Give Free" object:nil];
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(logout:) name:@"Logout" object:nil];
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(login:) name:@"Login" object:nil];
 }

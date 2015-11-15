@@ -9,24 +9,43 @@
 #import "MenuPage.h"
 #import "UIImage+ImageEffects.h"
 
-@implementation MenuPage
+@implementation GuestMenuPage
 
 -(id)initWithFrame:(CGRect)frame {
     self = [super initWithFrame:frame];
     
     self.tableData = [[SimpleTableViewData alloc] initWithSections:
-            [[SimpleTableViewSection alloc] initWithHeader:nil
-                                                   andRows:
-             @"Post"
-             , @"Login"
-             , @"Logout"
-             , @"About Us"
-                , nil],
+                      [[SimpleTableViewSection alloc] initWithHeader:nil
+                                                             andRows:
+                       @"Give Free"
+                       , @"Login"
+                       , @"About Sophilina"
+                       , nil],
                       nil]
     ;
     return self;
 }
 
+@end
+
+@implementation UserMenuPage
+
+-(id)initWithFrame:(CGRect)frame {
+    self = [super initWithFrame:frame];
+    
+    self.tableData = [[SimpleTableViewData alloc] initWithSections:
+                      [[SimpleTableViewSection alloc] initWithHeader:nil
+                                                             andRows:
+                       @"Give Free"
+                       , @"My Offers"
+                       , @"My Watches"
+                       , @"Logout"
+                       , @"About Sophilina"
+                       , nil],
+                      nil]
+    ;
+    return self;
+}
 
 @end
 

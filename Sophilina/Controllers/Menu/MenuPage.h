@@ -10,6 +10,9 @@
 #import "MenuItem.h"
 #import "MenuTopView.h"
 
-@interface MenuPage : SimpleTableViewPage
+@interface GuestMenuPage : SimpleTableViewPage
+@end
+
+@interface UserMenuPage : SimpleTableViewPage
 @end
 
