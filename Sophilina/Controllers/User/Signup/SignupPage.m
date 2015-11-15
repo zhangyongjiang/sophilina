@@ -44,6 +44,18 @@
     self.lastNameField.width = HalfWidthExcludePadding2;
     [self.scrollView addSubview:self.lastNameField];
     
+    self.cityField = [[FormTextField alloc] init];
+    self.cityField.accessibilityLabel = @"cityField";
+    self.cityField.placeholder = @"City";
+    self.cityField.width = HalfWidthExcludePadding2;
+    [self.scrollView addSubview:self.cityField];
+    
+    self.stateField = [[FormTextField alloc] init];
+    self.stateField.accessibilityLabel = @"stateField";
+    self.stateField.placeholder = @"State";
+    self.stateField.width = HalfWidthExcludePadding2;
+    [self.scrollView addSubview:self.stateField];
+    
     self.emailField = [[FullWidthField alloc] init];
     self.emailField.accessibilityLabel = @"emailField";
     self.emailField.placeholder = @"Email";
@@ -80,15 +92,18 @@
     self.lastNameField.y = FormTopMargin;
     [self.lastNameField alignParentRightWithMarghin:PagePadding];
     
-    [UIView setLeftMargin:PagePadding views:self.firstNameField, self.emailField, self.passwordField, /*self.genderField,*/ self.avatarRow, nil];
-    [UIView top2bottomWithMargin:1 views:self.firstNameField, self.emailField, self.passwordField, /*self.genderField, */ self.avatarRow, nil];
+    [UIView setLeftMargin:PagePadding views:self.firstNameField, self.emailField, self.passwordField, self.cityField, self.avatarRow, nil];
+    [UIView top2bottomWithMargin:1 views:self.firstNameField, self.emailField, self.passwordField, self.cityField,  self.avatarRow, nil];
+    
+    self.stateField.y = self.cityField.y;
+    [self.stateField alignParentRightWithMarghin:PagePadding];
     
     [self.userImgView vcenterInParent];
     self.userImgView.x = PagePadding * [UIView scale];
     [self.clickToUploadLabel vcenterInParent];
     [self.clickToUploadLabel rightOfView:self.userImgView withMargin:PagePadding * [UIView scale]];
     
-    UIView* containerView = [self maskViews:[NSArray arrayWithObjects:self.firstNameField, self.lastNameField, self.emailField, self.passwordField/*, self.genderField*/, self.avatarRow, nil]];
+    UIView* containerView = [self maskViews:[NSArray arrayWithObjects:self.firstNameField, self.lastNameField, self.emailField, self.passwordField, self.cityField, self.stateField, self.avatarRow, nil]];
     [self.scrollView addSubview:containerView];
     
     
