@@ -39,6 +39,8 @@
                        @"Give Free"
                        , @"My Offers"
                        , @"My Watches"
+                       , @"Profile"
+                       , @"Change Password"
                        , @"Logout"
                        , @"About Sophilina"
                        , nil],

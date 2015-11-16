@@ -2,6 +2,7 @@
 
 @interface ProductInfo : Data
 
+@property(strong, nonatomic) NSString* id;
 @property(strong, nonatomic) NSString* name;
 @property(strong, nonatomic) NSString* _description;
 

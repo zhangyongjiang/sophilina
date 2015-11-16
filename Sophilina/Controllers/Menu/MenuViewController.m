@@ -10,6 +10,8 @@
 #import "MenuPage.h"
 #import "UIImage+ImageEffects.h"
 #import "CreateProductViewController.h"
+#import "UpdateProfileViewController.h"
+#import "ChangePasswordViewController.h"
 
 @interface MenuViewController() <UINavigationControllerDelegate, UIImagePickerControllerDelegate>
 
@@ -43,6 +45,8 @@
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(postProduct:) name:@"Give Free" object:nil];
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(logout:) name:@"Logout" object:nil];
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(login:) name:@"Login" object:nil];
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(profile:) name:@"Profile" object:nil];
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(changePassword:) name:@"Change Password" object:nil];
 }
 
 -(void)postProduct:(NSNotification *) notification  {
@@ -60,6 +64,16 @@
 
 -(void)login:(NSNotification *) notification  {
     [[AppDelegate getInstance] startWelcomePage:YES];
+}
+
+-(void)changePassword:(NSNotification *) notification  {
+    ChangePasswordViewController* controller = [[ChangePasswordViewController alloc] init];
+    [[AppDelegate getInstance] pushViewController:controller];
+}
+
+-(void)profile:(NSNotification *) notification  {
+    UpdateProfileViewController* controller = [[UpdateProfileViewController alloc] init];
+    [[AppDelegate getInstance] pushViewController:controller];
 }
 
 

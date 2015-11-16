@@ -69,6 +69,10 @@
 		A3196CB71BF1C062008F47D2 /* Gotham-Rounded-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = A3196CAF1BF1C062008F47D2 /* Gotham-Rounded-Light.ttf */; };
 		A3196CB81BF1C062008F47D2 /* Gotham-Rounded-Medium-Italic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = A3196CB01BF1C062008F47D2 /* Gotham-Rounded-Medium-Italic.ttf */; };
 		A3196CB91BF1C062008F47D2 /* Gotham-Rounded-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = A3196CB11BF1C062008F47D2 /* Gotham-Rounded-Medium.ttf */; };
+		A331DC521BF94B6700CCFC27 /* UpdateProfilePage.m in Sources */ = {isa = PBXBuildFile; fileRef = A331DC4F1BF94B6700CCFC27 /* UpdateProfilePage.m */; };
+		A331DC531BF94B6700CCFC27 /* UpdateProfileViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A331DC511BF94B6700CCFC27 /* UpdateProfileViewController.m */; };
+		A331DC581BF95B7500CCFC27 /* ChangePasswordPage.m in Sources */ = {isa = PBXBuildFile; fileRef = A331DC551BF95B7500CCFC27 /* ChangePasswordPage.m */; };
+		A331DC591BF95B7500CCFC27 /* ChangePasswordViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A331DC571BF95B7500CCFC27 /* ChangePasswordViewController.m */; };
 		A343E48D1BEBC67600F57441 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = A343E48C1BEBC67600F57441 /* main.m */; };
 		A343E4901BEBC67600F57441 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = A343E48F1BEBC67600F57441 /* AppDelegate.m */; };
 		A343E4931BEBC67600F57441 /* MasterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A343E4921BEBC67600F57441 /* MasterViewController.m */; };
@@ -335,6 +339,14 @@
 		A3196CAF1BF1C062008F47D2 /* Gotham-Rounded-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Gotham-Rounded-Light.ttf"; sourceTree = "<group>"; };
 		A3196CB01BF1C062008F47D2 /* Gotham-Rounded-Medium-Italic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Gotham-Rounded-Medium-Italic.ttf"; sourceTree = "<group>"; };
 		A3196CB11BF1C062008F47D2 /* Gotham-Rounded-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Gotham-Rounded-Medium.ttf"; sourceTree = "<group>"; };
+		A331DC4E1BF94B6700CCFC27 /* UpdateProfilePage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UpdateProfilePage.h; sourceTree = "<group>"; };
+		A331DC4F1BF94B6700CCFC27 /* UpdateProfilePage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UpdateProfilePage.m; sourceTree = "<group>"; };
+		A331DC501BF94B6700CCFC27 /* UpdateProfileViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UpdateProfileViewController.h; sourceTree = "<group>"; };
+		A331DC511BF94B6700CCFC27 /* UpdateProfileViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UpdateProfileViewController.m; sourceTree = "<group>"; };
+		A331DC541BF95B7500CCFC27 /* ChangePasswordPage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChangePasswordPage.h; sourceTree = "<group>"; };
+		A331DC551BF95B7500CCFC27 /* ChangePasswordPage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChangePasswordPage.m; sourceTree = "<group>"; };
+		A331DC561BF95B7500CCFC27 /* ChangePasswordViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ChangePasswordViewController.h; sourceTree = "<group>"; };
+		A331DC571BF95B7500CCFC27 /* ChangePasswordViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ChangePasswordViewController.m; sourceTree = "<group>"; };
 		A343E4881BEBC67600F57441 /* Sophilina.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Sophilina.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A343E48C1BEBC67600F57441 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		A343E48E1BEBC67600F57441 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -673,6 +685,7 @@
 		A3196BB61BEC2D0F008F47D2 /* User */ = {
 			isa = PBXGroup;
 			children = (
+				A331DC481BF94B6700CCFC27 /* Settings */,
 				A3196BB71BEC2D0F008F47D2 /* Favorites */,
 				A3196BD31BEC2D0F008F47D2 /* Profile */,
 				A3196BD41BEC2D0F008F47D2 /* Recover */,
@@ -877,6 +890,45 @@
 				A3196CB11BF1C062008F47D2 /* Gotham-Rounded-Medium.ttf */,
 			);
 			path = fonts;
+			sourceTree = "<group>";
+		};
+		A331DC481BF94B6700CCFC27 /* Settings */ = {
+			isa = PBXGroup;
+			children = (
+				A331DC491BF94B6700CCFC27 /* ChangePassword */,
+				A331DC4A1BF94B6700CCFC27 /* NotificationSettings */,
+				A331DC4D1BF94B6700CCFC27 /* UpdateProfile */,
+			);
+			path = Settings;
+			sourceTree = "<group>";
+		};
+		A331DC491BF94B6700CCFC27 /* ChangePassword */ = {
+			isa = PBXGroup;
+			children = (
+				A331DC541BF95B7500CCFC27 /* ChangePasswordPage.h */,
+				A331DC551BF95B7500CCFC27 /* ChangePasswordPage.m */,
+				A331DC561BF95B7500CCFC27 /* ChangePasswordViewController.h */,
+				A331DC571BF95B7500CCFC27 /* ChangePasswordViewController.m */,
+			);
+			path = ChangePassword;
+			sourceTree = "<group>";
+		};
+		A331DC4A1BF94B6700CCFC27 /* NotificationSettings */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = NotificationSettings;
+			sourceTree = "<group>";
+		};
+		A331DC4D1BF94B6700CCFC27 /* UpdateProfile */ = {
+			isa = PBXGroup;
+			children = (
+				A331DC4E1BF94B6700CCFC27 /* UpdateProfilePage.h */,
+				A331DC4F1BF94B6700CCFC27 /* UpdateProfilePage.m */,
+				A331DC501BF94B6700CCFC27 /* UpdateProfileViewController.h */,
+				A331DC511BF94B6700CCFC27 /* UpdateProfileViewController.m */,
+			);
+			path = UpdateProfile;
 			sourceTree = "<group>";
 		};
 		A343E47F1BEBC67600F57441 = {
@@ -1624,6 +1676,7 @@
 				A343E5191BEBED9600F57441 /* RegisterRequest.m in Sources */,
 				A343E6421BEBF00E00F57441 /* TestViewController.m in Sources */,
 				A343E51B1BEBED9600F57441 /* SearchableProduct.m in Sources */,
+				A331DC581BF95B7500CCFC27 /* ChangePasswordPage.m in Sources */,
 				A343E6551BEBF1C800F57441 /* Image.m in Sources */,
 				A343E5841BEBEDA400F57441 /* UILabel+Cat.m in Sources */,
 				A343E5051BEBED9600F57441 /* Address.m in Sources */,
@@ -1658,6 +1711,7 @@
 				A343E5851BEBEDA400F57441 /* UITableViewCell+Util.m in Sources */,
 				A343E6211BEBEDAE00F57441 /* SimpleTableViewPage.m in Sources */,
 				A343E5961BEBEDA400F57441 /* TMMemoryCache.m in Sources */,
+				A331DC591BF95B7500CCFC27 /* ChangePasswordViewController.m in Sources */,
 				A3196C0E1BEC2D0F008F47D2 /* RecoverPasswordPage.m in Sources */,
 				A343E5771BEBEDA400F57441 /* NSNumber+Util.m in Sources */,
 				A343E5821BEBEDA400F57441 /* UIImage+Cat.m in Sources */,
@@ -1676,6 +1730,7 @@
 				A343E5171BEBED9600F57441 /* ProductInfo.m in Sources */,
 				A343E60F1BEBEDAE00F57441 /* LogoImageView.m in Sources */,
 				A343E5971BEBEDA400F57441 /* iToast.m in Sources */,
+				A331DC521BF94B6700CCFC27 /* UpdateProfilePage.m in Sources */,
 				A3196C1C1BEC2D0F008F47D2 /* SigninViewController.m in Sources */,
 				A343E5881BEBEDA400F57441 /* UIView+Position.m in Sources */,
 				A343E5FE1BEBEDAE00F57441 /* CoverView.m in Sources */,
@@ -1713,6 +1768,7 @@
 				A3196C511BEC30F3008F47D2 /* ContactNextShopperViewController.m in Sources */,
 				A3196C5E1BEC30F3008F47D2 /* NewMessagePage.m in Sources */,
 				A343E5911BEBEDA400F57441 /* KDRatingView.m in Sources */,
+				A331DC531BF94B6700CCFC27 /* UpdateProfileViewController.m in Sources */,
 				A343E5141BEBED9600F57441 /* NotificationList.m in Sources */,
 				A343E50D1BEBED9600F57441 /* LoginRequest.m in Sources */,
 				A343E6151BEBEDAE00F57441 /* NSScrollView.m in Sources */,

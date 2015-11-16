@@ -851,14 +851,14 @@
 	               }];
 }
 
-+(AFHTTPRequestOperation*) UserAPI_ResetPassword:(LoginRequest*)req onSuccess:(void (^)(GenericResponse *resp))successBlock onError:(void (^)(APIError *err))errorBlock {
-    NSString* url = @"ws/user/reset-password";
-    return [[WebService getOperationManager] POST:url
-	            parameters:[req toDictionary]
++(AFHTTPRequestOperation*) UserAPI_Me:(void (^)(User *resp))successBlock onError:(void (^)(APIError *err))errorBlock {
+    NSString* url = @"ws/user/me";
+    return [[WebService getOperationManager] GET:url
+	            parameters:nil
 	               success:^(AFHTTPRequestOperation *operation, id responseObject) {
 	                   ObjectMapper *mapper = [ObjectMapper mapper];
 	                   NSError *error;
-	                   GenericResponse* resp = [mapper mapObject:responseObject toClass:[GenericResponse class] withError:&error];
+	                   User* resp = [mapper mapObject:responseObject toClass:[User class] withError:&error];
 	                   if (error) {
 	                       errorBlock([[APIError alloc] initWithOperation:operation andError:error]);
 	                   } else { 
@@ -869,14 +869,14 @@
 	               }];
 }
 
-+(AFHTTPRequestOperation*) UserAPI_Me:(void (^)(User *resp))successBlock onError:(void (^)(APIError *err))errorBlock {
-    NSString* url = @"ws/user/me";
-    return [[WebService getOperationManager] GET:url
-	            parameters:nil
++(AFHTTPRequestOperation*) UserAPI_ResetPassword:(LoginRequest*)req onSuccess:(void (^)(GenericResponse *resp))successBlock onError:(void (^)(APIError *err))errorBlock {
+    NSString* url = @"ws/user/reset-password";
+    return [[WebService getOperationManager] POST:url
+	            parameters:[req toDictionary]
 	               success:^(AFHTTPRequestOperation *operation, id responseObject) {
 	                   ObjectMapper *mapper = [ObjectMapper mapper];
 	                   NSError *error;
-	                   User* resp = [mapper mapObject:responseObject toClass:[User class] withError:&error];
+	                   GenericResponse* resp = [mapper mapObject:responseObject toClass:[GenericResponse class] withError:&error];
 	                   if (error) {
 	                       errorBlock([[APIError alloc] initWithOperation:operation andError:error]);
 	                   } else { 

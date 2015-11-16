@@ -37,16 +37,11 @@
     req.lastName = self.page.lastNameField.text;
     req.email = self.page.emailField.text;
     req.password = self.page.passwordField.text;
-//    req.gender = self.page.genderField.text;
-    if (req.gender.length == 0 ) {
-        req.gender = nil;
-    }
-    if ([req.gender isEqualToString:@"Not to Say"]) {
-        req.gender = nil;
-    }
+    req.city = self.page.cityField.text;
+    req.state = self.page.stateField.text;
     
-    if (req.firstName.length == 0 || req.lastName.length == 0 || req.email.length == 0 || req.password.length == 0) {
-        [self alertWithTitle:@"Oops" andMsg:@"First name, last name, email and password are required." handler:nil];
+    if (req.firstName.length == 0 || req.lastName.length == 0 || req.email.length == 0 || req.password.length == 0 || req.city.length == 0 || req.state.length == 0) {
+        [self alertWithTitle:@"Oops" andMsg:@"First name, last name, email, password, city and state are required." handler:nil];
         return;
     }
     if (req.password.length < 6) {

@@ -6,9 +6,7 @@
 @property(strong, nonatomic) NSString* lastName;
 @property(strong, nonatomic) NSString* country;
 @property(strong, nonatomic) NSString* zipcode;
-@property(strong, nonatomic) NSString* gender;
-@property(strong, nonatomic) NSNumber* birthday;
-@property(strong, nonatomic) NSString* about;
-@property(strong, nonatomic) NSString* phoneList;
+@property(strong, nonatomic) NSString* city;
+@property(strong, nonatomic) NSString* state;
 
 @end
