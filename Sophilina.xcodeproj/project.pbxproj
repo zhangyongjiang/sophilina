@@ -76,6 +76,14 @@
 		A331DC5B1BF9C89900CCFC27 /* us-cities.tsv in Resources */ = {isa = PBXBuildFile; fileRef = A331DC5A1BF9C89900CCFC27 /* us-cities.tsv */; };
 		A331DC5E1BF9C8D200CCFC27 /* UnitedStatesCities.m in Sources */ = {isa = PBXBuildFile; fileRef = A331DC5D1BF9C8D200CCFC27 /* UnitedStatesCities.m */; };
 		A331DC621BFA41A300CCFC27 /* ListPickerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A331DC611BFA41A300CCFC27 /* ListPickerViewController.m */; };
+		A331DC6E1BFA65D300CCFC27 /* ProductListEmptyView.m in Sources */ = {isa = PBXBuildFile; fileRef = A331DC651BFA65D300CCFC27 /* ProductListEmptyView.m */; };
+		A331DC6F1BFA65D300CCFC27 /* ProductListItemTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = A331DC671BFA65D300CCFC27 /* ProductListItemTableViewCell.m */; };
+		A331DC701BFA65D300CCFC27 /* ProductListItemView.m in Sources */ = {isa = PBXBuildFile; fileRef = A331DC691BFA65D300CCFC27 /* ProductListItemView.m */; };
+		A331DC711BFA65D300CCFC27 /* ProductListPage.m in Sources */ = {isa = PBXBuildFile; fileRef = A331DC6B1BFA65D300CCFC27 /* ProductListPage.m */; };
+		A331DC721BFA65D300CCFC27 /* ProductListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A331DC6D1BFA65D300CCFC27 /* ProductListViewController.m */; };
+		A331DC781BFA68E300CCFC27 /* ProductDetailsPage.m in Sources */ = {isa = PBXBuildFile; fileRef = A331DC751BFA68E300CCFC27 /* ProductDetailsPage.m */; };
+		A331DC791BFA68E300CCFC27 /* ProductDetailsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A331DC771BFA68E300CCFC27 /* ProductDetailsViewController.m */; };
+		A331DC7C1BFA698600CCFC27 /* ProductNameViewBig.m in Sources */ = {isa = PBXBuildFile; fileRef = A331DC7B1BFA698600CCFC27 /* ProductNameViewBig.m */; };
 		A343E48D1BEBC67600F57441 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = A343E48C1BEBC67600F57441 /* main.m */; };
 		A343E4901BEBC67600F57441 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = A343E48F1BEBC67600F57441 /* AppDelegate.m */; };
 		A343E4931BEBC67600F57441 /* MasterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A343E4921BEBC67600F57441 /* MasterViewController.m */; };
@@ -276,12 +284,12 @@
 		A3196C381BEC30F3008F47D2 /* MessageDetailsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MessageDetailsViewController.m; sourceTree = "<group>"; };
 		A3196C391BEC30F3008F47D2 /* MessageItemView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MessageItemView.h; sourceTree = "<group>"; };
 		A3196C3A1BEC30F3008F47D2 /* MessageItemView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MessageItemView.m; sourceTree = "<group>"; };
-		A3196C3B1BEC30F3008F47D2 /* MessageThreadItemView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MessageThreadItemView.h; sourceTree = "<group>"; };
-		A3196C3C1BEC30F3008F47D2 /* MessageThreadItemView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MessageThreadItemView.m; sourceTree = "<group>"; };
-		A3196C3E1BEC30F3008F47D2 /* MessageListItemTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MessageListItemTableViewCell.h; sourceTree = "<group>"; };
-		A3196C3F1BEC30F3008F47D2 /* MessageListItemTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MessageListItemTableViewCell.m; sourceTree = "<group>"; };
-		A3196C401BEC30F3008F47D2 /* MessageListItemView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MessageListItemView.h; sourceTree = "<group>"; };
-		A3196C411BEC30F3008F47D2 /* MessageListItemView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MessageListItemView.m; sourceTree = "<group>"; };
+		A3196C3B1BEC30F3008F47D2 /* MessageThreadItemView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; lineEnding = 0; path = MessageThreadItemView.h; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objcpp; };
+		A3196C3C1BEC30F3008F47D2 /* MessageThreadItemView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; path = MessageThreadItemView.m; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objc; };
+		A3196C3E1BEC30F3008F47D2 /* MessageListItemTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; lineEnding = 0; path = MessageListItemTableViewCell.h; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objcpp; };
+		A3196C3F1BEC30F3008F47D2 /* MessageListItemTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; path = MessageListItemTableViewCell.m; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objc; };
+		A3196C401BEC30F3008F47D2 /* MessageListItemView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; lineEnding = 0; path = MessageListItemView.h; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objcpp; };
+		A3196C411BEC30F3008F47D2 /* MessageListItemView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; path = MessageListItemView.m; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objc; };
 		A3196C421BEC30F3008F47D2 /* MessageListPage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MessageListPage.h; sourceTree = "<group>"; };
 		A3196C431BEC30F3008F47D2 /* MessageListPage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MessageListPage.m; sourceTree = "<group>"; };
 		A3196C441BEC30F3008F47D2 /* MessageListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MessageListViewController.h; sourceTree = "<group>"; };
@@ -355,6 +363,22 @@
 		A331DC5D1BF9C8D200CCFC27 /* UnitedStatesCities.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UnitedStatesCities.m; sourceTree = "<group>"; };
 		A331DC601BFA41A300CCFC27 /* ListPickerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ListPickerViewController.h; sourceTree = "<group>"; };
 		A331DC611BFA41A300CCFC27 /* ListPickerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ListPickerViewController.m; sourceTree = "<group>"; };
+		A331DC641BFA65D300CCFC27 /* ProductListEmptyView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ProductListEmptyView.h; sourceTree = "<group>"; };
+		A331DC651BFA65D300CCFC27 /* ProductListEmptyView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProductListEmptyView.m; sourceTree = "<group>"; };
+		A331DC661BFA65D300CCFC27 /* ProductListItemTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; lineEnding = 0; path = ProductListItemTableViewCell.h; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objcpp; };
+		A331DC671BFA65D300CCFC27 /* ProductListItemTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; path = ProductListItemTableViewCell.m; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objc; };
+		A331DC681BFA65D300CCFC27 /* ProductListItemView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; lineEnding = 0; path = ProductListItemView.h; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objcpp; };
+		A331DC691BFA65D300CCFC27 /* ProductListItemView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; lineEnding = 0; path = ProductListItemView.m; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.objc; };
+		A331DC6A1BFA65D300CCFC27 /* ProductListPage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ProductListPage.h; sourceTree = "<group>"; };
+		A331DC6B1BFA65D300CCFC27 /* ProductListPage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProductListPage.m; sourceTree = "<group>"; };
+		A331DC6C1BFA65D300CCFC27 /* ProductListViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ProductListViewController.h; sourceTree = "<group>"; };
+		A331DC6D1BFA65D300CCFC27 /* ProductListViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProductListViewController.m; sourceTree = "<group>"; };
+		A331DC741BFA68E300CCFC27 /* ProductDetailsPage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ProductDetailsPage.h; sourceTree = "<group>"; };
+		A331DC751BFA68E300CCFC27 /* ProductDetailsPage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProductDetailsPage.m; sourceTree = "<group>"; };
+		A331DC761BFA68E300CCFC27 /* ProductDetailsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ProductDetailsViewController.h; sourceTree = "<group>"; };
+		A331DC771BFA68E300CCFC27 /* ProductDetailsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProductDetailsViewController.m; sourceTree = "<group>"; };
+		A331DC7A1BFA698600CCFC27 /* ProductNameViewBig.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ProductNameViewBig.h; sourceTree = "<group>"; };
+		A331DC7B1BFA698600CCFC27 /* ProductNameViewBig.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProductNameViewBig.m; sourceTree = "<group>"; };
 		A343E4881BEBC67600F57441 /* Sophilina.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Sophilina.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A343E48C1BEBC67600F57441 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		A343E48E1BEBC67600F57441 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -857,6 +881,8 @@
 		A3196C861BEF1379008F47D2 /* Product */ = {
 			isa = PBXGroup;
 			children = (
+				A331DC731BFA68E300CCFC27 /* Details */,
+				A331DC631BFA653100CCFC27 /* List */,
 				A3196C871BEF1379008F47D2 /* Create */,
 			);
 			path = Product;
@@ -947,6 +973,36 @@
 				A331DC611BFA41A300CCFC27 /* ListPickerViewController.m */,
 			);
 			path = ListPicker;
+			sourceTree = "<group>";
+		};
+		A331DC631BFA653100CCFC27 /* List */ = {
+			isa = PBXGroup;
+			children = (
+				A331DC641BFA65D300CCFC27 /* ProductListEmptyView.h */,
+				A331DC651BFA65D300CCFC27 /* ProductListEmptyView.m */,
+				A331DC661BFA65D300CCFC27 /* ProductListItemTableViewCell.h */,
+				A331DC671BFA65D300CCFC27 /* ProductListItemTableViewCell.m */,
+				A331DC681BFA65D300CCFC27 /* ProductListItemView.h */,
+				A331DC691BFA65D300CCFC27 /* ProductListItemView.m */,
+				A331DC6A1BFA65D300CCFC27 /* ProductListPage.h */,
+				A331DC6B1BFA65D300CCFC27 /* ProductListPage.m */,
+				A331DC6C1BFA65D300CCFC27 /* ProductListViewController.h */,
+				A331DC6D1BFA65D300CCFC27 /* ProductListViewController.m */,
+			);
+			path = List;
+			sourceTree = "<group>";
+		};
+		A331DC731BFA68E300CCFC27 /* Details */ = {
+			isa = PBXGroup;
+			children = (
+				A331DC7A1BFA698600CCFC27 /* ProductNameViewBig.h */,
+				A331DC7B1BFA698600CCFC27 /* ProductNameViewBig.m */,
+				A331DC741BFA68E300CCFC27 /* ProductDetailsPage.h */,
+				A331DC751BFA68E300CCFC27 /* ProductDetailsPage.m */,
+				A331DC761BFA68E300CCFC27 /* ProductDetailsViewController.h */,
+				A331DC771BFA68E300CCFC27 /* ProductDetailsViewController.m */,
+			);
+			path = Details;
 			sourceTree = "<group>";
 		};
 		A343E47F1BEBC67600F57441 = {
@@ -1716,6 +1772,7 @@
 				A343E61A1BEBEDAE00F57441 /* RadioButton.m in Sources */,
 				A343E5211BEBED9600F57441 /* User.m in Sources */,
 				A343E6AF1BEC289000F57441 /* ScaleImgViewController.m in Sources */,
+				A331DC7C1BFA698600CCFC27 /* ProductNameViewBig.m in Sources */,
 				A343E50A1BEBED9600F57441 /* Flag.m in Sources */,
 				A343E6541BEBF1C800F57441 /* Data.m in Sources */,
 				A3196C551BEC30F3008F47D2 /* MessageDetailsViewController.m in Sources */,
@@ -1729,10 +1786,12 @@
 				A3196C211BEC2FAF008F47D2 /* ResourceList.m in Sources */,
 				A343E6221BEBEDAE00F57441 /* SimpleTableViewSection.m in Sources */,
 				A343E61F1BEBEDAE00F57441 /* SimpleRow.m in Sources */,
+				A331DC711BFA65D300CCFC27 /* ProductListPage.m in Sources */,
 				A343E5081BEBED9600F57441 /* Configuration.m in Sources */,
 				A343E6651BEC24AE00F57441 /* WebService.m in Sources */,
 				A343E5851BEBEDA400F57441 /* UITableViewCell+Util.m in Sources */,
 				A343E6211BEBEDAE00F57441 /* SimpleTableViewPage.m in Sources */,
+				A331DC6E1BFA65D300CCFC27 /* ProductListEmptyView.m in Sources */,
 				A343E5961BEBEDA400F57441 /* TMMemoryCache.m in Sources */,
 				A331DC591BF95B7500CCFC27 /* ChangePasswordViewController.m in Sources */,
 				A3196C0E1BEC2D0F008F47D2 /* RecoverPasswordPage.m in Sources */,
@@ -1748,9 +1807,11 @@
 				A343E6201BEBEDAE00F57441 /* SimpleTableViewData.m in Sources */,
 				A343E5791BEBEDA400F57441 /* NSObject+Event.m in Sources */,
 				A343E5161BEBED9600F57441 /* Product.m in Sources */,
+				A331DC6F1BFA65D300CCFC27 /* ProductListItemTableViewCell.m in Sources */,
 				A343E63E1BEBF00E00F57441 /* MenuPage.m in Sources */,
 				A3196C6E1BED6373008F47D2 /* MessageThread.m in Sources */,
 				A343E5171BEBED9600F57441 /* ProductInfo.m in Sources */,
+				A331DC781BFA68E300CCFC27 /* ProductDetailsPage.m in Sources */,
 				A343E60F1BEBEDAE00F57441 /* LogoImageView.m in Sources */,
 				A343E5971BEBEDA400F57441 /* iToast.m in Sources */,
 				A331DC521BF94B6700CCFC27 /* UpdateProfilePage.m in Sources */,
@@ -1794,6 +1855,7 @@
 				A331DC531BF94B6700CCFC27 /* UpdateProfileViewController.m in Sources */,
 				A343E5141BEBED9600F57441 /* NotificationList.m in Sources */,
 				A343E50D1BEBED9600F57441 /* LoginRequest.m in Sources */,
+				A331DC791BFA68E300CCFC27 /* ProductDetailsViewController.m in Sources */,
 				A343E6151BEBEDAE00F57441 /* NSScrollView.m in Sources */,
 				A343E60E1BEBEDAE00F57441 /* ListValuePickerView.m in Sources */,
 				A343E6A81BEC289000F57441 /* FAQPage.m in Sources */,
@@ -1836,6 +1898,7 @@
 				A343E6A61BEC289000F57441 /* AboutPage.m in Sources */,
 				A343E50C1BEBED9600F57441 /* GenericResponse.m in Sources */,
 				A343E6561BEBF1C800F57441 /* LanguageDict.m in Sources */,
+				A331DC721BFA65D300CCFC27 /* ProductListViewController.m in Sources */,
 				A3196C5A1BEC30F3008F47D2 /* MessageListPage.m in Sources */,
 				A343E63C1BEBF00E00F57441 /* BaseViewController.m in Sources */,
 				A343E5871BEBEDA400F57441 /* UIView+Autolayout.m in Sources */,
@@ -1870,6 +1933,7 @@
 				A343E5FB1BEBEDAE00F57441 /* AvatarTitleSummaryCell.m in Sources */,
 				A343E50F1BEBED9600F57441 /* Memo.m in Sources */,
 				A343E51E1BEBED9600F57441 /* Tag.m in Sources */,
+				A331DC701BFA65D300CCFC27 /* ProductListItemView.m in Sources */,
 				A343E63F1BEBF00E00F57441 /* MenuTopView.m in Sources */,
 				A3196C5F1BEC30F3008F47D2 /* NewMessageViewController.m in Sources */,
 			);

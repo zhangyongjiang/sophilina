@@ -8,8 +8,10 @@
 
 #import <UIKit/UIKit.h>
 
-@interface MessageThreadItemView : UIView
+#define ProductListItemViewHeight 150
 
-@property(strong,nonatomic)MessageDetails* messageDetails;
+@interface ProductListItemView : UIView
+
+@property(strong,nonatomic)ProductDetails* ProductDetails;
 
 @end

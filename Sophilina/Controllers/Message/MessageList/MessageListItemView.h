@@ -1,5 +1,5 @@
 //
-//  OrderItemView.h
+//  ProductView.h
 //
 //
 //  Created by Kevin Zhang on 1/3/15.

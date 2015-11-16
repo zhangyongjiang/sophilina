@@ -12,6 +12,7 @@
 #import "CreateProductViewController.h"
 #import "UpdateProfileViewController.h"
 #import "ChangePasswordViewController.h"
+#import "ProductListViewController.h"
 
 @interface MenuViewController() <UINavigationControllerDelegate, UIImagePickerControllerDelegate>
 
@@ -47,6 +48,12 @@
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(login:) name:@"Login" object:nil];
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(profile:) name:@"Profile" object:nil];
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(changePassword:) name:@"Change Password" object:nil];
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(myContributions:) name:@"My Offers" object:nil];
+}
+
+-(void)myContributions:(NSNotification *) notification  {
+    ProductListViewController* controller = [[ProductListViewController alloc] init];
+    [[AppDelegate getInstance] pushViewController:controller];
 }
 
 -(void)postProduct:(NSNotification *) notification  {

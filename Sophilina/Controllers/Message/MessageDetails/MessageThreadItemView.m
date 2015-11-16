@@ -1,5 +1,5 @@
 //
-//  OrderItemView.m
+//  ProductView.m
 //
 //
 //  Created by Kevin Zhang on 1/3/15.

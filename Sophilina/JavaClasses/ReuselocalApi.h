@@ -11,6 +11,7 @@
 #import "SupportedVersions.h"
 #import "Product.h"
 #import "ProductInfo.h"
+#import "ProductDetails.h"
 #import "ProductDetailsList.h"
 #import "FlagRequest.h"
 #import "NotificationSettings.h"
@@ -75,6 +76,8 @@
 
 +(AFHTTPRequestOperation*) ProductAPI_Remove:(NSString*)productId info:(ProductInfo*)info onSuccess:(void (^)(Product *resp))successBlock onError:(void (^)(APIError *err))errorBlock;
 
++(AFHTTPRequestOperation*) ProductAPI_Get:(NSString*)productId onSuccess:(void (^)(ProductDetails *resp))successBlock onError:(void (^)(APIError *err))errorBlock;
+
 +(AFHTTPRequestOperation*) ProductAPI_Search:(NSString*)keywords category:(NSString*)category offset:(NSNumber*)offset size:(NSNumber*)size onSuccess:(void (^)(ProductDetailsList *resp))successBlock onError:(void (^)(APIError *err))errorBlock;
 
 +(AFHTTPRequestOperation*) ProductAPI_Flag:(FlagRequest*)flagRequest onSuccess:(void (^)(Product *resp))successBlock onError:(void (^)(APIError *err))errorBlock;
@@ -88,6 +91,8 @@
 +(AFHTTPRequestOperation*) ProductAPI_Take:(NSString*)productId info:(ProductInfo*)info onSuccess:(void (^)(Product *resp))successBlock onError:(void (^)(APIError *err))errorBlock;
 
 +(AFHTTPRequestOperation*) ProductAPI_Unflag:(FlagRequest*)flagRequest onSuccess:(void (^)(Product *resp))successBlock onError:(void (^)(APIError *err))errorBlock;
+
++(AFHTTPRequestOperation*) ProductAPI_Mine:(void (^)(ProductDetailsList *resp))successBlock onError:(void (^)(APIError *err))errorBlock;
 
 +(AFHTTPRequestOperation*) PushNotificationAPI_Remove:(NSString*)notificationId onSuccess:(void (^)(GenericResponse *resp))successBlock onError:(void (^)(APIError *err))errorBlock;
 
@@ -115,9 +120,9 @@
 
 +(AFHTTPRequestOperation*) UserAPI_Update:(UserBasicInfo*)info onSuccess:(void (^)(User *resp))successBlock onError:(void (^)(APIError *err))errorBlock;
 
-+(AFHTTPRequestOperation*) UserAPI_ChangePassword:(ChangePasswordRequest*)req onSuccess:(void (^)(GenericResponse *resp))successBlock onError:(void (^)(APIError *err))errorBlock;
-
 +(AFHTTPRequestOperation*) UserAPI_Me:(void (^)(User *resp))successBlock onError:(void (^)(APIError *err))errorBlock;
+
++(AFHTTPRequestOperation*) UserAPI_ChangePassword:(ChangePasswordRequest*)req onSuccess:(void (^)(GenericResponse *resp))successBlock onError:(void (^)(APIError *err))errorBlock;
 
 +(AFHTTPRequestOperation*) UserAPI_ResetPassword:(LoginRequest*)req onSuccess:(void (^)(GenericResponse *resp))successBlock onError:(void (^)(APIError *err))errorBlock;
 

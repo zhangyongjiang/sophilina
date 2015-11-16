@@ -1,6 +1,7 @@
 #import "CreateProductViewController.h"
 #import "CreateProductPage.h"
 #import "MessageListViewController.h"
+#import "ProductListViewController.h"
 
 @interface CreateProductViewController () <UINavigationControllerDelegate, UIImagePickerControllerDelegate>
 
@@ -66,7 +67,8 @@
     self.product.info.name = self.page.textFieldSubject.text;
     self.product.info.details = self.page.textFieldContent.text;
     [ReuselocalApi ProductAPI_CreateProduct:self.product onSuccess:^(Product *resp) {
-        
+        ProductListViewController* controller = [[ProductListViewController alloc] init];
+        [[AppDelegate getInstance] startPage:controller];
     } onError:^(APIError *err) {
         
     }];

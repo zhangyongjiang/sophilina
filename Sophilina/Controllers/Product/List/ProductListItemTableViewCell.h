@@ -7,10 +7,10 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "MessageListItemView.h"
+#import "ProductListItemView.h"
 
-@interface MessageListItemTableViewCell : UITableViewCell
+@interface ProductListItemTableViewCell : UITableViewCell
 
--(void)setMessageDetails:(MessageDetails*)data;
+@property(strong,nonatomic)ProductDetails* ProductDetails;
 
 @end

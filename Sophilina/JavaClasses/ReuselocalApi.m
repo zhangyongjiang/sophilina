@@ -456,6 +456,25 @@
 	               }];
 }
 
++(AFHTTPRequestOperation*) ProductAPI_Get:(NSString*)productId onSuccess:(void (^)(ProductDetails *resp))successBlock onError:(void (^)(APIError *err))errorBlock {
+    NSString* url = @"ws/product/{productId}";
+    url = [url stringByReplacingOccurrencesOfString:@"{productId}" withString:[productId description]];
+    return [[WebService getOperationManager] GET:url
+	            parameters:nil
+	               success:^(AFHTTPRequestOperation *operation, id responseObject) {
+	                   ObjectMapper *mapper = [ObjectMapper mapper];
+	                   NSError *error;
+	                   ProductDetails* resp = [mapper mapObject:responseObject toClass:[ProductDetails class] withError:&error];
+	                   if (error) {
+	                       errorBlock([[APIError alloc] initWithOperation:operation andError:error]);
+	                   } else { 
+	                       successBlock(resp);
+	                   }
+	               } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
+	                   errorBlock([[APIError alloc] initWithOperation:operation andError:error]);
+	               }];
+}
+
 +(AFHTTPRequestOperation*) ProductAPI_Search:(NSString*)keywords category:(NSString*)category offset:(NSNumber*)offset size:(NSNumber*)size onSuccess:(void (^)(ProductDetailsList *resp))successBlock onError:(void (^)(APIError *err))errorBlock {
     NSString* url = @"ws/product/search";
     NSMutableDictionary* dict = [[NSMutableDictionary alloc] init];
@@ -581,6 +600,24 @@
 	                   ObjectMapper *mapper = [ObjectMapper mapper];
 	                   NSError *error;
 	                   Product* resp = [mapper mapObject:responseObject toClass:[Product class] withError:&error];
+	                   if (error) {
+	                       errorBlock([[APIError alloc] initWithOperation:operation andError:error]);
+	                   } else { 
+	                       successBlock(resp);
+	                   }
+	               } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
+	                   errorBlock([[APIError alloc] initWithOperation:operation andError:error]);
+	               }];
+}
+
++(AFHTTPRequestOperation*) ProductAPI_Mine:(void (^)(ProductDetailsList *resp))successBlock onError:(void (^)(APIError *err))errorBlock {
+    NSString* url = @"ws/product/mine";
+    return [[WebService getOperationManager] GET:url
+	            parameters:nil
+	               success:^(AFHTTPRequestOperation *operation, id responseObject) {
+	                   ObjectMapper *mapper = [ObjectMapper mapper];
+	                   NSError *error;
+	                   ProductDetailsList* resp = [mapper mapObject:responseObject toClass:[ProductDetailsList class] withError:&error];
 	                   if (error) {
 	                       errorBlock([[APIError alloc] initWithOperation:operation andError:error]);
 	                   } else { 
@@ -833,14 +870,14 @@
 	               }];
 }
 
-+(AFHTTPRequestOperation*) UserAPI_ChangePassword:(ChangePasswordRequest*)req onSuccess:(void (^)(GenericResponse *resp))successBlock onError:(void (^)(APIError *err))errorBlock {
-    NSString* url = @"ws/user/change-password";
-    return [[WebService getOperationManager] POST:url
-	            parameters:[req toDictionary]
++(AFHTTPRequestOperation*) UserAPI_Me:(void (^)(User *resp))successBlock onError:(void (^)(APIError *err))errorBlock {
+    NSString* url = @"ws/user/me";
+    return [[WebService getOperationManager] GET:url
+	            parameters:nil
 	               success:^(AFHTTPRequestOperation *operation, id responseObject) {
 	                   ObjectMapper *mapper = [ObjectMapper mapper];
 	                   NSError *error;
-	                   GenericResponse* resp = [mapper mapObject:responseObject toClass:[GenericResponse class] withError:&error];
+	                   User* resp = [mapper mapObject:responseObject toClass:[User class] withError:&error];
 	                   if (error) {
 	                       errorBlock([[APIError alloc] initWithOperation:operation andError:error]);
 	                   } else { 
@@ -851,14 +888,14 @@
 	               }];
 }
 
-+(AFHTTPRequestOperation*) UserAPI_Me:(void (^)(User *resp))successBlock onError:(void (^)(APIError *err))errorBlock {
-    NSString* url = @"ws/user/me";
-    return [[WebService getOperationManager] GET:url
-	            parameters:nil
++(AFHTTPRequestOperation*) UserAPI_ChangePassword:(ChangePasswordRequest*)req onSuccess:(void (^)(GenericResponse *resp))successBlock onError:(void (^)(APIError *err))errorBlock {
+    NSString* url = @"ws/user/change-password";
+    return [[WebService getOperationManager] POST:url
+	            parameters:[req toDictionary]
 	               success:^(AFHTTPRequestOperation *operation, id responseObject) {
 	                   ObjectMapper *mapper = [ObjectMapper mapper];
 	                   NSError *error;
-	                   User* resp = [mapper mapObject:responseObject toClass:[User class] withError:&error];
+	                   GenericResponse* resp = [mapper mapObject:responseObject toClass:[GenericResponse class] withError:&error];
 	                   if (error) {
 	                       errorBlock([[APIError alloc] initWithOperation:operation andError:error]);
 	                   } else { 
