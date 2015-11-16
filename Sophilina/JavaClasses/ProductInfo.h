@@ -4,6 +4,6 @@
 
 @property(strong, nonatomic) NSString* id;
 @property(strong, nonatomic) NSString* name;
-@property(strong, nonatomic) NSString* _description;
+@property(strong, nonatomic) NSString* details;
 
 @end

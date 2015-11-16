@@ -35,8 +35,9 @@
     
     User* user = [NSUserDefaults savedUser];
     if (user) {
-        self.page.textCity.text = user.info.city;
-        self.page.textState.text = user.info.state;
+        self.page.labelLocation.text = [NSString stringWithFormat:@"%@, %@", user.info.city, user.info.state];
+        self.product.location.city = user.info.city;
+        self.product.location.state = user.info.state;
     }
 }
 
@@ -63,9 +64,7 @@
 
 -(void)sendMsg {
     self.product.info.name = self.page.textFieldSubject.text;
-    self.product.info._description = self.page.textFieldContent.text;
-    self.product.location.city = self.page.textCity.text;
-    self.product.location.state = self.page.textState.text;
+    self.product.info.details = self.page.textFieldContent.text;
     [ReuselocalApi ProductAPI_CreateProduct:self.product onSuccess:^(Product *resp) {
         
     } onError:^(APIError *err) {
@@ -83,7 +82,7 @@
                 self.product.imgs = [[NSMutableArray alloc] init];
             }
             [self.product.imgs addObject:resp.path];
-            if (self.product.imgs.count == self.page.images.count) {
+            if (self.product.imgs.count >= self.page.images.count) {
                 [self sendMsg];
             }
         } onError:^(APIError *err) {
