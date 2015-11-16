@@ -22,18 +22,15 @@
         [containerView removeFromSuperview];
     }
     
-    self.textFieldSubject = [[FullWidthField alloc] initWithPlaceHolder:@"Title"];
-    [self.textFieldSubject gray8];
-    self.textFieldSubject.y = 100;
-    [self.scrollView addSubview:self.textFieldSubject];
-//    self.textFieldSubject.enabled = NO;
+    self.textCity = [[FullWidthTextFieldWithLabel alloc] initWithLabel:@"City"];
+    [self.scrollView addSubview:self.textCity];
+    [self.textCity belowView:self.textFieldContent withMargin:FieldVMargin];
     
-    self.textFieldContent = [[NSUITextView alloc] initWithFrame:CGRectMake(PagePadding, 100*[UIView scale], FullWidthExcludePadding, 150)];
-    self.textFieldContent.placeholder = @"Description";
-    [self.textFieldContent belowView:self.textFieldSubject withMargin:FieldVMargin];
-    [self.scrollView addSubview:self.textFieldContent];
+    self.textState = [[FullWidthTextFieldWithLabel alloc] initWithLabel:@"State"];
+    [self.scrollView addSubview:self.textState];
+    [self.textState belowView:self.textCity withMargin:FieldVMargin];
     
-    containerView = [self maskViews:[NSArray arrayWithObjects:self.textFieldSubject, self.textFieldContent, nil]];
+    containerView = [self maskViews:[NSArray arrayWithObjects:self.textFieldSubject, self.textFieldContent, self.textCity, self.textState, nil]];
     [self.scrollView addSubview:containerView];
 
     return self;

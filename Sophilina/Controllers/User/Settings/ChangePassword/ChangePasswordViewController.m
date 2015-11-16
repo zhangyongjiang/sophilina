@@ -47,7 +47,7 @@
     }
     
     [ReuselocalApi UserAPI_ChangePassword:req onSuccess:^(GenericResponse *resp) {
-        [self alertWithTitle:@"Info" andMsg:@"Password changed"];
+//        [self alertWithTitle:@"Info" andMsg:@"Password changed"];
 //        [[iToast makeText:@"Password changed"] show];
         [self.navigationController popViewControllerAnimated:YES];
     } onError:^(APIError *err) {

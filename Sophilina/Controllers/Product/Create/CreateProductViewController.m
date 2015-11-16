@@ -32,6 +32,12 @@
     
     self.product = [[Product alloc] init];
     self.product.info = [[ProductInfo alloc] init];
+    
+    User* user = [NSUserDefaults savedUser];
+    if (user) {
+        self.page.textCity.text = user.info.city;
+        self.page.textState.text = user.info.state;
+    }
 }
 
 -(void)viewWillAppear:(BOOL)animated {
@@ -58,6 +64,13 @@
 -(void)sendMsg {
     self.product.info.name = self.page.textFieldSubject.text;
     self.product.info._description = self.page.textFieldContent.text;
+    self.product.location.city = self.page.textCity.text;
+    self.product.location.state = self.page.textState.text;
+    [ReuselocalApi ProductAPI_CreateProduct:self.product onSuccess:^(Product *resp) {
+        
+    } onError:^(APIError *err) {
+        
+    }];
 }
 
 -(void)sendImages {

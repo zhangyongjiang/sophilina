@@ -10,7 +10,7 @@
 #import "ImageViewController.h"
 #import "APBAlertView.h"
 
-#define PlaceHolder @"Your message here"
+#define PlaceHolder @"details"
 
 @interface SendMessagePage() <UITextViewDelegate>
 
@@ -42,9 +42,6 @@
     self.labelAttachment.text = @"Attach a photo";
     [self.labelAttachment styleTableViewRowTag];
     [self.scrollView addSubview:self.labelAttachment];
-
-    containerView = [self maskViews:[NSArray arrayWithObjects:self.textFieldSubject, self.textFieldContent, nil]];
-    [self.scrollView addSubview:containerView];
 
     return self;
 }

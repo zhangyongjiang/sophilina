@@ -2,7 +2,7 @@
 
 @interface CreateProductPage : SendMessagePage
 
-@property(strong, nonatomic)FullWidthField* textCity;
-@property(strong, nonatomic)FullWidthField* textState;
+@property(strong, nonatomic)FullWidthTextFieldWithLabel* textCity;
+@property(strong, nonatomic)FullWidthTextFieldWithLabel* textState;
 
 @end
