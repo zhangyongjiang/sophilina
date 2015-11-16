@@ -7,10 +7,13 @@
 //
 
 #import "SignupPage.h"
+#import <CoreLocation/CoreLocation.h>
 
-@interface SignupPage() <UINavigationControllerDelegate, UIImagePickerControllerDelegate, UIPickerViewDataSource, UIPickerViewDelegate>
+@interface SignupPage() <UINavigationControllerDelegate, UIImagePickerControllerDelegate, UIPickerViewDataSource, UIPickerViewDelegate, UITextFieldDelegate, CLLocationManagerDelegate>
 @property(strong, nonatomic)UIView* avatarRow;
 //@property(strong,nonatomic)UIPickerView* pickerView;
+
+@property(strong, nonatomic)CLLocationManager* locationManager;
 @end
 
 @implementation SignupPage
@@ -49,12 +52,14 @@
     self.cityField.placeholder = @"City";
     self.cityField.width = HalfWidthExcludePadding2;
     [self.scrollView addSubview:self.cityField];
+    self.cityField.delegate = self;
     
     self.stateField = [[FormTextField alloc] init];
     self.stateField.accessibilityLabel = @"stateField";
     self.stateField.placeholder = @"State";
     self.stateField.width = HalfWidthExcludePadding2;
     [self.scrollView addSubview:self.stateField];
+    self.stateField.delegate = self;
     
     self.emailField = [[FullWidthField alloc] init];
     self.emailField.accessibilityLabel = @"emailField";
@@ -184,4 +189,36 @@
     return sectionWidth;
 }
 
+-(void)textFieldDidBeginEditing:(UITextField *)textField {
+    if (textField == self.cityField || textField == self.stateField) {
+        if (!self.locationManager) {
+            self.locationManager = [[CLLocationManager alloc] init];
+            self.locationManager.delegate = self;
+            [self.locationManager requestWhenInUseAuthorization];
+            [self.locationManager startUpdatingLocation];
+        }
+    }
+}
+
+-(void)locationManager:(CLLocationManager *)manager didUpdateLocations:(NSArray<CLLocation *> *)locations {
+    CLLocation *loc = [locations lastObject];
+    [self.locationManager stopUpdatingLocation];
+    CLGeocoder * geoCoder = [[CLGeocoder alloc] init];
+    [geoCoder reverseGeocodeLocation:loc
+                   completionHandler:^(NSArray *placemarks, NSError *error) {
+                       for (CLPlacemark *placemark in placemarks) {
+                           NSLog(@"placemark.ISOcountryCode %@",placemark.ISOcountryCode);
+                           NSLog(@"placemark.country %@",placemark.country);
+                           NSLog(@"placemark.postalCode %@",placemark.postalCode);
+                           NSLog(@"placemark.administrativeArea %@",placemark.administrativeArea);
+                           NSLog(@"placemark.locality %@",placemark.locality);
+                           NSLog(@"placemark.subLocality %@",placemark.subLocality);
+                           NSLog(@"placemark.subThoroughfare %@",placemark.subThoroughfare);
+                           
+                           self.cityField.text = placemark.locality;
+                           self.stateField.text = placemark.administrativeArea;
+                           break;
+                       }
+                   }];
+}
 @end

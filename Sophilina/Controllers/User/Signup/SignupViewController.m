@@ -1,5 +1,6 @@
 #import "SignupViewController.h"
 #import "HomeViewController.h"
+#import <CoreLocation/CoreLocation.h>
 
 @interface SignupViewController ()
 

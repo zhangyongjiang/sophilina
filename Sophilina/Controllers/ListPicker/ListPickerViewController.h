@@ -11,5 +11,8 @@
 @interface ListPickerViewController : BaseViewController
 
 @property(strong,nonatomic)NSMutableArray* values;
+@property(strong,nonatomic)NSMutableArray* filtedValues;
+
+@property (nonatomic, copy)void (^onChange)(NSString *selectedValue);
 
 @end
