@@ -137,6 +137,27 @@ static BOOL useStaging = NO;
     }];
 }
 
++(AFHTTPRequestOperation*)uploadImage:(NSData *)request forProduct:(NSString*)prodId onSuccess:(void (^)(Product *))successBlock onError:(void (^)(APIError *))errorBlock {
+    NSString* path = [NSString stringWithFormat:@"/ws/product/add-image/%@", prodId];
+    return [self upload:request toPath:path success:^(AFHTTPRequestOperation *operation, id responseObject) {
+        
+        NSError* error;
+        NSDictionary* json = [NSJSONSerialization JSONObjectWithData:operation.responseData
+                                                             options:kNilOptions
+                                                               error:&error];
+        ObjectMapper *mapper = [ObjectMapper mapper];
+        Product* resp = [mapper mapObject:json toClass:[Product class] withError:&error];
+        if (error) {
+            errorBlock([[APIError alloc] initWithOperation:operation andError:error]);
+        } else {
+            successBlock(resp);
+        }
+    } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
+        NSLog(@"Error: %@", error);
+        errorBlock([[APIError alloc] initWithOperation:operation andError:error]);
+    }];
+}
+
 +(AFHTTPRequestOperation*)uploadUserAvatar:(NSData *)request onSuccess:(void (^)(User *))successBlock onError:(void (^)(APIError *))errorBlock {
     return [self upload:request toPath:@"/ws/user/upload-image" success:^(AFHTTPRequestOperation *operation, id responseObject) {
         NSError* error;

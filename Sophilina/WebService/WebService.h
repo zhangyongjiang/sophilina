@@ -11,6 +11,7 @@
 #import "MyOperationManager.h"
 #import "User.h"
 #import "Resource.h"
+#import "Product.h"
 #import "RegisterRequest.h"
 #import "LoginRequest.h"
 #import "GenericResponse.h"
@@ -43,4 +44,7 @@
 +(void) requestImageWithPath:(NSString*)path complete:(void (^)(UIImage *))complete;
 
 +(AFHTTPRequestOperation*) getContentFromUrl:(NSString*)url onSuccess:(void (^)(NSString *resp))successBlock onError:(void (^)(APIError *err))errorBlock;
+
++(AFHTTPRequestOperation*)uploadImage:(NSData *)request forProduct:(NSString*)prodId onSuccess:(void (^)(Product *))successBlock onError:(void (^)(APIError *))errorBlock ;
+
 @end

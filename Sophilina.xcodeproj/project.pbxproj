@@ -84,6 +84,8 @@
 		A331DC781BFA68E300CCFC27 /* ProductDetailsPage.m in Sources */ = {isa = PBXBuildFile; fileRef = A331DC751BFA68E300CCFC27 /* ProductDetailsPage.m */; };
 		A331DC791BFA68E300CCFC27 /* ProductDetailsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A331DC771BFA68E300CCFC27 /* ProductDetailsViewController.m */; };
 		A331DC7C1BFA698600CCFC27 /* ProductNameViewBig.m in Sources */ = {isa = PBXBuildFile; fileRef = A331DC7B1BFA698600CCFC27 /* ProductNameViewBig.m */; };
+		A331DC821BFAAB3E00CCFC27 /* UpdateProductPage.m in Sources */ = {isa = PBXBuildFile; fileRef = A331DC7F1BFAAB3E00CCFC27 /* UpdateProductPage.m */; };
+		A331DC831BFAAB3E00CCFC27 /* UpdateProductViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A331DC811BFAAB3E00CCFC27 /* UpdateProductViewController.m */; };
 		A343E48D1BEBC67600F57441 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = A343E48C1BEBC67600F57441 /* main.m */; };
 		A343E4901BEBC67600F57441 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = A343E48F1BEBC67600F57441 /* AppDelegate.m */; };
 		A343E4931BEBC67600F57441 /* MasterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = A343E4921BEBC67600F57441 /* MasterViewController.m */; };
@@ -379,6 +381,10 @@
 		A331DC771BFA68E300CCFC27 /* ProductDetailsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProductDetailsViewController.m; sourceTree = "<group>"; };
 		A331DC7A1BFA698600CCFC27 /* ProductNameViewBig.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ProductNameViewBig.h; sourceTree = "<group>"; };
 		A331DC7B1BFA698600CCFC27 /* ProductNameViewBig.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProductNameViewBig.m; sourceTree = "<group>"; };
+		A331DC7E1BFAAB3E00CCFC27 /* UpdateProductPage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UpdateProductPage.h; sourceTree = "<group>"; };
+		A331DC7F1BFAAB3E00CCFC27 /* UpdateProductPage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UpdateProductPage.m; sourceTree = "<group>"; };
+		A331DC801BFAAB3E00CCFC27 /* UpdateProductViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UpdateProductViewController.h; sourceTree = "<group>"; };
+		A331DC811BFAAB3E00CCFC27 /* UpdateProductViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UpdateProductViewController.m; sourceTree = "<group>"; };
 		A343E4881BEBC67600F57441 /* Sophilina.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Sophilina.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A343E48C1BEBC67600F57441 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		A343E48E1BEBC67600F57441 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -881,6 +887,7 @@
 		A3196C861BEF1379008F47D2 /* Product */ = {
 			isa = PBXGroup;
 			children = (
+				A331DC7D1BFAAB3E00CCFC27 /* Update */,
 				A331DC731BFA68E300CCFC27 /* Details */,
 				A331DC631BFA653100CCFC27 /* List */,
 				A3196C871BEF1379008F47D2 /* Create */,
@@ -1003,6 +1010,17 @@
 				A331DC771BFA68E300CCFC27 /* ProductDetailsViewController.m */,
 			);
 			path = Details;
+			sourceTree = "<group>";
+		};
+		A331DC7D1BFAAB3E00CCFC27 /* Update */ = {
+			isa = PBXGroup;
+			children = (
+				A331DC7E1BFAAB3E00CCFC27 /* UpdateProductPage.h */,
+				A331DC7F1BFAAB3E00CCFC27 /* UpdateProductPage.m */,
+				A331DC801BFAAB3E00CCFC27 /* UpdateProductViewController.h */,
+				A331DC811BFAAB3E00CCFC27 /* UpdateProductViewController.m */,
+			);
+			path = Update;
 			sourceTree = "<group>";
 		};
 		A343E47F1BEBC67600F57441 = {
@@ -1848,6 +1866,7 @@
 				A3196C5D1BEC30F3008F47D2 /* MessageReplyViewController.m in Sources */,
 				A343E6051BEBEDAE00F57441 /* IconTitleRightImg.m in Sources */,
 				A343E6AA1BEC289000F57441 /* PrivacyPolicyPage.m in Sources */,
+				A331DC821BFAAB3E00CCFC27 /* UpdateProductPage.m in Sources */,
 				A343E5FA1BEBEDAE00F57441 /* APBAlertView.m in Sources */,
 				A3196C511BEC30F3008F47D2 /* ContactNextShopperViewController.m in Sources */,
 				A3196C5E1BEC30F3008F47D2 /* NewMessagePage.m in Sources */,
@@ -1875,6 +1894,7 @@
 				A343E6411BEBF00E00F57441 /* ScrollViewController.m in Sources */,
 				A3196C0D1BEC2D0F008F47D2 /* RecoverPasswordController.m in Sources */,
 				A343E50B1BEBED9600F57441 /* FlagRequest.m in Sources */,
+				A331DC831BFAAB3E00CCFC27 /* UpdateProductViewController.m in Sources */,
 				A3196C741BED64A3008F47D2 /* MessageDetailsList.m in Sources */,
 				A343E6101BEBEDAE00F57441 /* MBSegmentedControl.m in Sources */,
 				A343E5861BEBEDA400F57441 /* UITextField+Style.m in Sources */,
