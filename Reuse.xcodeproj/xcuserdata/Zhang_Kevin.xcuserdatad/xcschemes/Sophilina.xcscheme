@@ -17,7 +17,7 @@
                BlueprintIdentifier = "A343E4871BEBC67600F57441"
                BuildableName = "Sophilina.app"
                BlueprintName = "Sophilina"
-               ReferencedContainer = "container:Sophilina.xcodeproj">
+               ReferencedContainer = "container:Reuse.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -35,7 +35,7 @@
                BlueprintIdentifier = "A343E4A31BEBC67600F57441"
                BuildableName = "SophilinaTests.xctest"
                BlueprintName = "SophilinaTests"
-               ReferencedContainer = "container:Sophilina.xcodeproj">
+               ReferencedContainer = "container:Reuse.xcodeproj">
             </BuildableReference>
          </TestableReference>
          <TestableReference
@@ -45,7 +45,7 @@
                BlueprintIdentifier = "A343E4AE1BEBC67600F57441"
                BuildableName = "SophilinaUITests.xctest"
                BlueprintName = "SophilinaUITests"
-               ReferencedContainer = "container:Sophilina.xcodeproj">
+               ReferencedContainer = "container:Reuse.xcodeproj">
             </BuildableReference>
          </TestableReference>
       </Testables>
@@ -55,7 +55,7 @@
             BlueprintIdentifier = "A343E4871BEBC67600F57441"
             BuildableName = "Sophilina.app"
             BlueprintName = "Sophilina"
-            ReferencedContainer = "container:Sophilina.xcodeproj">
+            ReferencedContainer = "container:Reuse.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
       <AdditionalOptions>
@@ -78,7 +78,7 @@
             BlueprintIdentifier = "A343E4871BEBC67600F57441"
             BuildableName = "Sophilina.app"
             BlueprintName = "Sophilina"
-            ReferencedContainer = "container:Sophilina.xcodeproj">
+            ReferencedContainer = "container:Reuse.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
       <AdditionalOptions>
@@ -97,7 +97,7 @@
             BlueprintIdentifier = "A343E4871BEBC67600F57441"
             BuildableName = "Sophilina.app"
             BlueprintName = "Sophilina"
-            ReferencedContainer = "container:Sophilina.xcodeproj">
+            ReferencedContainer = "container:Reuse.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </ProfileAction>

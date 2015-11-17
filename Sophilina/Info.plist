@@ -22,6 +22,24 @@
 	<string>1</string>
 	<key>LSRequiresIPhoneOS</key>
 	<true/>
+	<key>NSAppTransportSecurity</key>
+	<dict>
+		<key>NSAllowsArbitraryLoads</key>
+		<true/>
+	</dict>
+	<key>NSLocationWhenInUseUsageDescription</key>
+	<string>Your location is used to remove items which are far away from you. You won't see items in New York when you are in San Francisco.</string>
+	<key>UIAppFonts</key>
+	<array>
+		<string>Gotham-Rounded-Medium.ttf</string>
+		<string>gotham-rounded-book.otf</string>
+		<string>gotham-rounded-bold-italic.otf</string>
+		<string>Gotham-Rounded-Bold.ttf</string>
+		<string>gotham-rounded-book-italic.otf</string>
+		<string>Gotham-Rounded-Light-Italic.ttf</string>
+		<string>Gotham-Rounded-Light.ttf</string>
+		<string>Gotham-Rounded-Medium-Italic.ttf</string>
+	</array>
 	<key>UILaunchStoryboardName</key>
 	<string>LaunchScreen</string>
 	<key>UIMainStoryboardFile</key>
@@ -46,23 +64,5 @@
 		<string>UIInterfaceOrientationLandscapeLeft</string>
 		<string>UIInterfaceOrientationLandscapeRight</string>
 	</array>
-	<key>NSAppTransportSecurity</key>
-	<dict>
-		<key>NSAllowsArbitraryLoads</key>
-		<true/>
-	</dict>
-	<key>UIAppFonts</key>
-	<array>
-		<string>Gotham-Rounded-Medium.ttf</string>
-		<string>gotham-rounded-book.otf</string>
-		<string>gotham-rounded-bold-italic.otf</string>
-		<string>Gotham-Rounded-Bold.ttf</string>
-		<string>gotham-rounded-book-italic.otf</string>
-		<string>Gotham-Rounded-Light-Italic.ttf</string>
-		<string>Gotham-Rounded-Light.ttf</string>
-		<string>Gotham-Rounded-Medium-Italic.ttf</string>
-	</array>
-	<key>NSLocationWhenInUseUsageDescription</key>
-	<string>Your location is used to remove items which are far away from you. You won&apos;t see items in New York when you are in San Francisco.</string>
 </dict>
 </plist>

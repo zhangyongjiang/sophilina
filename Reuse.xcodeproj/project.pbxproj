@@ -1634,7 +1634,7 @@
 					};
 				};
 			};
-			buildConfigurationList = A343E4831BEBC67600F57441 /* Build configuration list for PBXProject "Sophilina" */;
+			buildConfigurationList = A343E4831BEBC67600F57441 /* Build configuration list for PBXProject "Reuse" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -2099,7 +2099,7 @@
 				GCC_PREFIX_HEADER = Sophilina/PrefixHeader.pch;
 				INFOPLIST_FILE = Sophilina/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.sophilina.Sophilina;
+				PRODUCT_BUNDLE_IDENTIFIER = net.reuse.sophilina;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
@@ -2113,7 +2113,7 @@
 				GCC_PREFIX_HEADER = Sophilina/PrefixHeader.pch;
 				INFOPLIST_FILE = Sophilina/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.sophilina.Sophilina;
+				PRODUCT_BUNDLE_IDENTIFIER = net.reuse.sophilina;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;
@@ -2169,7 +2169,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		A343E4831BEBC67600F57441 /* Build configuration list for PBXProject "Sophilina" */ = {
+		A343E4831BEBC67600F57441 /* Build configuration list for PBXProject "Reuse" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				A343E4B61BEBC67600F57441 /* Debug */,

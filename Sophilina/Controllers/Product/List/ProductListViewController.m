@@ -23,18 +23,21 @@
 }
 
 -(void)refreshPage {
-    [ReuselocalApi ProductAPI_Mine:^(ProductDetailsList *resp) {
+    [ReuselocalApi ProductAPI_ListUserProducts:self.userId onSuccess:^(ProductDetailsList *resp) {
         self.page.ProductDetailsList = resp;
+        if (!self.userId) {
+            self.title = [NSString stringWithFormat:@"%@'s Offers", resp.owner.info.firstName];
+        }
     } onError:^(APIError *err) {
+        
     }];
 }
 
 -(void)viewWillAppear:(BOOL)animated {
     [super viewWillAppear:animated];
-    self.title = @"My Contributions";
-}
-
--(void)nextPage {
+    if (!self.userId) {
+        self.title = @"My Contributions";
+    }
 }
 
 @end
