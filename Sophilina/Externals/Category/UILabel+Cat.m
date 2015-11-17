@@ -26,7 +26,6 @@
 #import "NSObject+Attach.h"
 #import "NSObject+Event.h"
 #import <objc/runtime.h>
-#import "LanguageFile.h"
 
 @implementation UILabel (Cat)
 
@@ -43,7 +42,6 @@
 
 -(void)setAttributedText_swizzle:(NSAttributedString *)attributedText {
     NSMutableAttributedString *newString = [[NSMutableAttributedString alloc] initWithAttributedString:attributedText];
-    [LanguageFile translateMutableString:newString.mutableString];
     [self setAttributedText_swizzle:newString];
     if(self.fit) {
         [self sizeToFit];
@@ -122,7 +120,6 @@
     }
     else {
         NSString* translated = text;
-        translated = [LanguageFile translate:text];
         if (self.uppercase) {
             [self setText_swizzle:[translated uppercaseString]];
         }
