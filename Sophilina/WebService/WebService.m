@@ -12,7 +12,7 @@
 #import "TMCache.h"
 
 static WebService* instance;
-static BOOL useLocalHost = YES;
+static BOOL useLocalHost = NO;
 static BOOL useStaging = NO;
 
 @interface WebService()
@@ -41,7 +41,7 @@ static BOOL useStaging = NO;
         return @"http://api.onsalelocal.com";
     }
     else {
-        return @"https://api.nextshopper.com";
+        return @"http://sophilina.com/sophilina";
     }
 }
 
@@ -118,7 +118,7 @@ static BOOL useStaging = NO;
 }
 
 +(AFHTTPRequestOperation*)upload:(NSData *)request onSuccess:(void (^)(Resource *))successBlock onError:(void (^)(APIError *))errorBlock {
-    return [self upload:request toPath:@"/ws/resource/upload-for-user" success:^(AFHTTPRequestOperation *operation, id responseObject) {
+    return [self upload:request toPath:@"ws/resource/upload-for-user" success:^(AFHTTPRequestOperation *operation, id responseObject) {
         
         NSError* error;
         NSDictionary* json = [NSJSONSerialization JSONObjectWithData:operation.responseData
@@ -132,13 +132,14 @@ static BOOL useStaging = NO;
             successBlock(resp);
         }
     } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
-        NSLog(@"Error: %@", error);
+        NSString* newStr = [[NSString alloc] initWithData:operation.responseData encoding:NSUTF8StringEncoding];
+        NSLog(@"Error: %@", newStr);
         errorBlock([[APIError alloc] initWithOperation:operation andError:error]);
     }];
 }
 
 +(AFHTTPRequestOperation*)uploadImage:(NSData *)request forProduct:(NSString*)prodId onSuccess:(void (^)(Product *))successBlock onError:(void (^)(APIError *))errorBlock {
-    NSString* path = [NSString stringWithFormat:@"/ws/product/add-image/%@", prodId];
+    NSString* path = [NSString stringWithFormat:@"ws/product/add-image/%@", prodId];
     return [self upload:request toPath:path success:^(AFHTTPRequestOperation *operation, id responseObject) {
         
         NSError* error;
@@ -159,7 +160,7 @@ static BOOL useStaging = NO;
 }
 
 +(AFHTTPRequestOperation*)uploadUserAvatar:(NSData *)request onSuccess:(void (^)(User *))successBlock onError:(void (^)(APIError *))errorBlock {
-    return [self upload:request toPath:@"/ws/user/upload-image" success:^(AFHTTPRequestOperation *operation, id responseObject) {
+    return [self upload:request toPath:@"ws/user/upload-image" success:^(AFHTTPRequestOperation *operation, id responseObject) {
         NSError* error;
         NSDictionary* json = [NSJSONSerialization JSONObjectWithData:operation.responseData
                                                              options:kNilOptions
